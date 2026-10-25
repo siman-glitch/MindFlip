@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido - MindFlip</title>
+    <title>Dificultad - MindFlip</title>
     <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -25,25 +25,46 @@
     </header>
 
     <main>
-        <section class="bienvenida">
-            <h1>¡Bienvenido a MindFlip!</h1>
-            <p>Prepara tu memoria para el desafío.</p>
+        <section class="dificultad">
 
-            <img src="../recursos/imagenes/13_reverso_carta.png"
-                 alt="Carta de MindFlip">
+            <p>MINDFLIP / SELECCIÓN DE NIVEL</p>
+            <h1>Elige tu dificultad</h1>
+            <p>Selecciona el nivel que quieres jugar.</p>
 
-            <h2>¿Cómo jugar?</h2>
+            <div class="niveles">
 
-            <div class="instrucciones">
-                <p>1. Selecciona un nivel de dificultad.</p>
-                <p>2. Gira dos cartas en cada turno.</p>
-                <p>3. Encuentra las parejas iguales.</p>
-                <p>4. Completa la partida antes de que termine el tiempo.</p>
+                <article class="nivel facil">
+                    <h2>Fácil</h2>
+                    <p>Ideal para empezar.</p>
+                    <img src="../recursos/imagenes/01_simple_corazon.png"
+                         alt="Carta corazón">
+                    <button type="button" data-nivel="facil">
+                        JUGAR FÁCIL
+                    </button>
+                </article>
+
+                <article class="nivel medio">
+                    <h2>Medio</h2>
+                    <p>Pon a prueba tu memoria.</p>
+                    <img src="../recursos/imagenes/06_doble_pica.png"
+                         alt="Carta pica">
+                    <button type="button" data-nivel="medio">
+                        JUGAR MEDIO
+                    </button>
+                </article>
+
+                <article class="nivel dificil">
+                    <h2>Difícil</h2>
+                    <p>Un desafío para expertos.</p>
+                    <img src="../recursos/imagenes/09_as_corazon.png"
+                         alt="Carta as de corazón">
+                    <button type="button" data-nivel="dificil">
+                        JUGAR DIFÍCIL
+                    </button>
+                </article>
+
             </div>
 
-            <a class="boton" href="../dificultad/index.html">
-                EMPEZAR A JUGAR
-            </a>
         </section>
     </main>
 
@@ -62,7 +83,7 @@
                     <a href="../inicio/index.html">Inicio</a>
                     <a href="../dificultad/index.html">Jugar</a>
                     <a href="../ranking/index.html">Ranking</a>
-                    <a href="../perfil/index.html">Mi perfil</a>
+                    <a href="../Bienvenido/index.html">Cómo jugar</a>
                 </nav>
             </div>
 

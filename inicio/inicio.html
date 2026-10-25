@@ -1,150 +1,182 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Inicio - MindFlip</title>
+
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="inicio.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="../inicio/inicio.css">
 </head>
 
 <body>
-    <!--  LOGO Y MENU -->
 
+    <!-- LOGO Y MENU -->
     <header>
+
         <div class="logo">
-            <img src="../recursos/imagenes/LOGO.png" id="imglogo">
+            <img src="../recursos/imagenes/LOGO.png" id="imglogo" alt="Logo de MindFlip">
             <h1>MindFlip</h1>
         </div>
 
-        <nav class="menu">
-            
-                <a href="#">Inicio</a>
-                <a href="#">Jugar</a>
-                <a href="#">Ranking</a>
-                <a href="#">Mi Perfil</a>
-            
-
+        <nav class="menu" aria-label="Navegación principal">
+            <a href="../inicio/index.html">Inicio</a>
+            <a href="../dificultad/index.html">Jugar</a>
+            <a href="../ranking/index.html">Ranking</a>
+            <a href="../perfil/index.html">Mi Perfil</a>
         </nav>
+
     </header>
 
-    <!--  CONTENIDO DE LA PAGINA -->
-
+    <!-- CONTENIDO DE LA PAGINA -->
     <main>
 
         <section class="presentacion">
 
-            <h1>ENCUENTRA LAS PAREJAS </h1>
-            <p>Gira las cartas , encuentra cartas y gana puntos </p>
+            <p class="subtitulo">MINDFLIP / 01 - ACCESO E INICIO</p>
+
+            <h2>Encuentra las parejas</h2>
+
+            <p>Gira las cartas, encuentra las parejas y gana puntos.</p>
+
             <div class="imagenes_presentacion">
-                <img src="../recursos/imagenes/01_simple_corazon.png">
-                <img src="../recursos/imagenes/04_simple_trebol.png">
-                <img src="../recursos/imagenes/09_as_corazon.png">
-                <img src="../recursos/imagenes/10_as_pica.png">
+                <img src="../recursos/imagenes/01_simple_corazon.png" alt="Carta de corazón">
+                <img src="../recursos/imagenes/02_simple_pica.png" alt="Carta de pica">
+                <img src="../recursos/imagenes/03_simple_diamante.png" alt="Carta de diamante">
+                <img src="../recursos/imagenes/04_simple_trebol.png" alt="Carta de trébol">
             </div>
+
             <div class="texto">
 
                 <p>Pon a prueba tu memoria con las cartas clásicas.</p>
-                <p>3 niveles</p>
-                <p>Top 10 ranking </p>
-                <p>Partidas rápidas</p>
+
+                <div class="caracteristicas">
+                    <span>3 niveles</span>
+                    <span>Top 10 ranking</span>
+                    <span>Partidas rápidas</span>
+                </div>
 
             </div>
+
         </section>
 
-
-
-
+        <!-- FORMULARIO LOGIN -->
         <section class="login">
 
-
             <div class="formulario">
-                <form action="">
-                    <h2>iniciar sesión</h2>
-                    <P>Entra para guardar tus resultados</P>
 
-                    Usuario: <input type="text" name="nombre" id="nombre">
-                    Contraseña: <input type="password" name="nombre" id="nombre">
+                <h2>Iniciar sesión</h2>
+                <p>Entra para guardar tus resultados.</p>
+
+                <form id="form_login">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre de usuario</label>
+                        <input type="text" name="nombre" id="nombre"
+                               placeholder="Tu usuario" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" name="contrasena" id="contrasena"
+                               placeholder="Tu contraseña" required>
+                    </div>
+
                     <button type="submit">INICIAR SESIÓN</button>
-                </form>
-            </div>
 
+                </form>
+
+            </div>
 
             <div class="registro">
                 <p>¿Aún no tienes cuenta?</p>
-                <a href="#">Crear cuenta</a>
-
-
+                <a href="../registro/index.html">Crear cuenta</a>
             </div>
-
-
-
-
 
         </section>
 
     </main>
 
-    <!--  FOOTER DE LA PAGINA -->
+    <!-- FOOTER DE LA PAGINA -->
     <footer class="footer">
 
-        <nav class="menu_footer_nav">
-            <div class="enlaces_footer_nav">
-                <a href="#">Inicio</a>
-                <a href="#">Jugar</a>
-                <a href="#">Ranking</a>
-                <a href="#">Mi Perfil</a>
+        <div class="footer_contenido">
+
+            <!-- LOGO FOOTER -->
+            <div class="footer_logo">
+                <h2>MindFlip</h2>
+                <p>JUEGO DE MEMORIA</p>
+                <p>♥ ♠ ♦ ♣</p>
+                <p>Entrena tu memoria, supera tus límites y diviértete.</p>
             </div>
 
-        </nav>
+            <!-- NAVEGACION FOOTER -->
+            <div class="footer_navegacion">
+                <h3>Navegación</h3>
 
-
-        <nav class="menu_footer_sup">
-            <div class="enlaces_footer_sup">
-                <a href="#">Ayuda</a>
-                <a href="#">Contacto</a>
-                <a href="#">Politiva de privacidad</a>
-                <a href="#">Términos de uso</a>
+                <nav class="menu_footer_nav" aria-label="Navegación del footer">
+                    <div class="enlaces_footer_nav">
+                        <a href="../inicio/index.html">Inicio</a>
+                        <a href="../dificultad/index.html">Jugar</a>
+                        <a href="../ranking/index.html">Ranking</a>
+                        <a href="../Bienvenido/index.html">Cómo jugar</a>
+                    </div>
+                </nav>
             </div>
 
-        </nav>
+            <!-- SOPORTE -->
+            <div class="footer_soporte">
+                <h3>Soporte</h3>
 
-        <div class="redes_sociales">
-            <a href="https://discord.com" aria-label="Discord">
-                <i class="fa-brands fa-discord"></i>
-            </a>
+                <div class="enlaces_footer_sup">
+                    <span>Ayuda</span>
+                    <span>Contacto</span>
+                    <span>Política de privacidad</span>
+                    <span>Términos de uso</span>
+                </div>
+            </div>
 
-            <a href="https://instagram.com" aria-label="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+            <!-- REDES SOCIALES -->
+            <div class="footer_redes">
 
-            <a href="https://github.com" aria-label="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+                <h3>Síguenos</h3>
 
-            <a href="https://youtube.com" aria-label="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
+                <div class="redes_sociales">
+
+                    <a href="https://discord.com" aria-label="Discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://github.com" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://youtube.com" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+            </div>
+
         </div>
 
-        <!-- ©:copy  -->
-        <p>&copy; 2026 MindFlip. Todos los derechos reservados </p>
-
-
-
-
+        <!-- COPYRIGHT -->
+        <div class="footer_inferior">
+            <p>&copy; 2026 MindFlip. Todos los derechos reservados.</p>
+            <p>RETO 1 / 2.º DAW</p>
+        </div>
 
     </footer>
 
-
-
-
-
-
-
-
+    <script src="script.js" defer></script>
 
 </body>
-
 </html>
