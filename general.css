@@ -2,14 +2,14 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: #850E16;
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
 }
 
 /*================HEADER==========================================*/
 header {
-    height: 130px;
+    height: 100px;
     background: linear-gradient(to bottom, #5c0508, #6e070a);
     display: flex;
     flex-direction: row;
@@ -71,12 +71,11 @@ header {
 
 /*================FOOTER-SUPERIOR==========================================*/
 .footer {
-    min-height: 40vh;
     background-color: aqua;
     display: flex;
     flex-direction: column;
     background-color: #850E16;
-    
+
 
 }
 
@@ -88,9 +87,9 @@ header {
     justify-content: space-around;
     border-top: 1px solid rgb(240, 218, 17);
     border-bottom: 1px solid rgb(240, 218, 17);
-align-items: flex-start;
-padding: 10px;
-box-sizing: border-box;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
 
 }
 
@@ -154,16 +153,17 @@ box-sizing: border-box;
     background-color: #a51b20;
 
 }
+
 /*================FOOTER-INFERIOR==========================================*/
 
-.footer_inferior{
-background: #540508;
-display: flex;
-flex-direction: row;
-justify-content: center;
+.footer_inferior {
+    background: #540508;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
 
-.footer_inferior p{
-color: white;
+.footer_inferior p {
+    color: white;
 }

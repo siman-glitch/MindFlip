@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil - MindFlip</title>
+
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="../recursos/imagenes/LOGO.png" id="imglogo" alt="Logo de MindFlip">
+            <h1>MindFlip</h1>
+        </div>
+
+        <nav class="menu">
+            <a href="../inicio/index.html">Inicio</a>
+            <a href="../dificultad/index.html">Jugar</a>
+            <a href="../ranking/index.html">Ranking</a>
+            <a href="../perfil/index.html">Mi Perfil</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PERFIL -->
+    <main>
+
+        <section class="pagina_perfil">
+
+            <p class="subtitulo">MINDFLIP / 04 - PERFIL</p>
+            <h2>Mi perfil</h2>
+            <p>Consulta y actualiza los datos de jugador.</p>
+
+            <div class="perfil_contenido">
+
+                <!-- TARJETA DEL JUGADOR -->
+                <article class="tarjeta_jugador">
+
+                    <div class="avatar">
+                        <span>●</span>
+                    </div>
+
+                    <h3 id="perfil_nombre_visible">Jugador123</h3>
+                    <p>Miembro de MindFlip</p>
+
+                    <label for="foto_perfil" class="boton_cambiar_foto">
+                        CAMBIAR FOTO
+                    </label>
+
+                    <input type="file" name="foto" id="foto_perfil" accept="image/*">
+
+                    <p class="resumen_perfil">
+                        14 partidas - 1.250 puntos récord
+                    </p>
+
+                </article>
+
+                <!-- DATOS PERSONALES -->
+                <article class="datos_personales">
+
+                    <h3>Datos personales</h3>
+
+                    <form id="form_perfil">
+
+                        <div class="campos_perfil">
+
+                            <div class="campo">
+                                <label for="perfil_usuario">Nombre de usuario</label>
+                                <input type="text" id="perfil_usuario" name="usuario"
+                                       value="Jugador123" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="perfil_correo">Correo electrónico</label>
+                                <input type="email" id="perfil_correo" name="correo"
+                                       value="jugador@correo.com" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="perfil_nombre">Nombre</label>
+                                <input type="text" id="perfil_nombre" name="nombre"
+                                       placeholder="Nombre de ejemplo">
+                            </div>
+
+                            <div class="campo">
+                                <label for="perfil_password">Contraseña nueva</label>
+                                <input type="password" id="perfil_password" name="password"
+                                       placeholder="Nueva contraseña">
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="boton_principal">
+                            GUARDAR CAMBIOS
+                        </button>
+
+                    </form>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer_contenido">
+
+            <div class="footer_navegacion">
+                <h3>Navegación</h3>
+                <nav class="menu_footer_nav">
+                    <div class="enlaces_footer_nav">
+                        <a href="../inicio/index.html">Inicio</a>
+                        <a href="../dificultad/index.html">Jugar</a>
+                        <a href="../ranking/index.html">Ranking</a>
+                        <a href="../Bienvenido/index.html">Cómo jugar</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer_soporte">
+                <h3>Soporte</h3>
+                <div class="enlaces_footer_sup">
+                    <span>Ayuda</span>
+                    <span>Contacto</span>
+                    <span>Política de privacidad</span>
+                    <span>Términos de uso</span>
+                </div>
+            </div>
+
+            <div class="footer_redes">
+                <h3>Síguenos</h3>
+                <div class="redes_sociales">
+                    <a href="https://discord.com" aria-label="Discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://youtube.com" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer_inferior">
+            <p>&copy; 2026 MindFlip. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

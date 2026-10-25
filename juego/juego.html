@@ -4,88 +4,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jugar - MindFlip</title>
+    <title>Juego - MindFlip</title>
+
     <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="logo">
-            <img src="../recursos/imagenes/LOGO.png" alt="Logo MindFlip">
-            <span>MindFlip</span>
+            <img src="../recursos/imagenes/LOGO.png" id="imglogo" alt="Logo de MindFlip">
+            <h1>MindFlip</h1>
         </div>
+
         <nav class="menu">
             <a href="../inicio/index.html">Inicio</a>
             <a href="../dificultad/index.html">Jugar</a>
             <a href="../ranking/index.html">Ranking</a>
-            <a href="../perfil/index.html">Mi perfil</a>
+            <a href="../perfil/index.html">Mi Perfil</a>
         </nav>
     </header>
 
+    <!-- CONTENIDO JUEGO -->
     <main>
+
         <section class="juego">
 
-            <h1>Encuentra las parejas</h1>
-            <p>Gira las cartas y encuentra todas las parejas.</p>
+            <p class="subtitulo">MINDFLIP / 06 - PARTIDA EN CURSO</p>
+            <h2>Partida en curso</h2>
+            <p>Encuentra todas las parejas antes de que termine el tiempo.</p>
 
-            <div class="informacion_partida">
+            <div class="juego_contenido">
 
-                <div class="nivel_actual">
-                    <h2>Nivel</h2>
-                    <p id="nivel">Fácil</p>
+                <!-- ESTADISTICAS -->
+                <aside class="estadisticas_juego">
+
+                    <div class="estadistica">
+                        <h3>NIVEL ACTUAL</h3>
+                        <strong id="nivel_actual">MEDIO</strong>
+                    </div>
+
+                    <div class="estadistica">
+                        <h3>TIEMPO</h3>
+                        <strong id="tiempo">00:32</strong>
+                    </div>
+
+                    <div class="estadistica">
+                        <h3>INTENTOS</h3>
+                        <strong id="intentos">12</strong>
+                    </div>
+
+                    <div class="estadistica">
+                        <h3>PUNTUACIÓN</h3>
+                        <strong id="puntuacion">200</strong>
+                    </div>
+
+                </aside>
+
+                <!-- TABLERO -->
+                <div class="tablero">
+
+                    <div class="cartas_juego" id="tablero">
+
+                        <button type="button" class="carta carta_oculta" data-posicion="0">?</button>
+                        <button type="button" class="carta carta_descubierta" data-posicion="1">♥</button>
+                        <button type="button" class="carta carta_oculta" data-posicion="2">?</button>
+                        <button type="button" class="carta carta_descubierta" data-posicion="3">♠</button>
+
+                        <button type="button" class="carta carta_oculta" data-posicion="4">?</button>
+                        <button type="button" class="carta carta_oculta" data-posicion="5">?</button>
+                        <button type="button" class="carta carta_descubierta" data-posicion="6">♦</button>
+                        <button type="button" class="carta carta_oculta" data-posicion="7">?</button>
+
+                        <button type="button" class="carta carta_oculta" data-posicion="8">?</button>
+                        <button type="button" class="carta carta_oculta" data-posicion="9">?</button>
+                        <button type="button" class="carta carta_descubierta" data-posicion="10">♥</button>
+                        <button type="button" class="carta carta_descubierta" data-posicion="11">♣</button>
+
+                        <button type="button" class="carta carta_oculta" data-posicion="12">?</button>
+                        <button type="button" class="carta carta_oculta" data-posicion="13">?</button>
+                        <button type="button" class="carta carta_descubierta" data-posicion="14">♠</button>
+                        <button type="button" class="carta carta_oculta" data-posicion="15">?</button>
+
+                    </div>
+
                 </div>
 
-                <div class="tiempo">
-                    <h2>Tiempo</h2>
-                    <p id="cronometro">00:00</p>
-                </div>
+                <!-- RESUMEN -->
+                <aside class="resumen_partida">
 
-                <div class="intentos">
-                    <h2>Intentos</h2>
-                    <p id="intentos">0</p>
-                </div>
+                    <h3>Tu partida</h3>
 
-                <div class="parejas">
-                    <h2>Parejas</h2>
-                    <p id="parejas_encontradas">0</p>
-                </div>
+                    <p>Parejas encontradas</p>
+                    <strong id="parejas_encontradas">3 / 8</strong>
 
-            </div>
+                    <p>Partidas en sesión</p>
+                    <strong id="partidas_sesion">2</strong>
 
-            <!-- Las cartas se crearán con JavaScript -->
-            <div class="tablero" id="tablero"></div>
+                    <div class="acciones_partida">
+                        <button type="button" id="reiniciar_partida">REINICIAR</button>
+                        <a href="../dificultad/index.html">VOLVER</a>
+                    </div>
 
-            <div class="controles">
-                <button type="button" id="reiniciar">
-                    Reiniciar partida
-                </button>
+                </aside>
 
-                <a href="../dificultad/index.html">
-                    Cambiar dificultad
-                </a>
             </div>
 
         </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
+
         <div class="footer_contenido">
-            <div class="footer_logo">
-                <h2>MindFlip</h2>
-                <p>JUEGO DE MEMORIA</p>
-                <p>♥ ♠ ♦ ♣</p>
-                <p>Entrena tu memoria y diviértete.</p>
-            </div>
 
             <div class="footer_navegacion">
                 <h3>Navegación</h3>
                 <nav class="menu_footer_nav">
-                    <a href="../inicio/index.html">Inicio</a>
-                    <a href="../dificultad/index.html">Jugar</a>
-                    <a href="../ranking/index.html">Ranking</a>
-                    <a href="../Bienvenido/index.html">Cómo jugar</a>
+                    <div class="enlaces_footer_nav">
+                        <a href="../inicio/index.html">Inicio</a>
+                        <a href="../dificultad/index.html">Jugar</a>
+                        <a href="../ranking/index.html">Ranking</a>
+                        <a href="../Bienvenido/index.html">Cómo jugar</a>
+                    </div>
                 </nav>
             </div>
 
@@ -94,7 +138,7 @@
                 <div class="enlaces_footer_sup">
                     <span>Ayuda</span>
                     <span>Contacto</span>
-                    <span>Privacidad</span>
+                    <span>Política de privacidad</span>
                     <span>Términos de uso</span>
                 </div>
             </div>
@@ -102,18 +146,27 @@
             <div class="footer_redes">
                 <h3>Síguenos</h3>
                 <div class="redes_sociales">
-                    <a href="https://discord.com" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-                    <a href="https://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://youtube.com" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://discord.com" aria-label="Discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://youtube.com" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
                 </div>
             </div>
+
         </div>
 
         <div class="footer_inferior">
             <p>&copy; 2026 MindFlip. Todos los derechos reservados.</p>
-            <p>RETO 1 / 2.º DAW</p>
         </div>
+
     </footer>
 
     <script src="script.js" defer></script>

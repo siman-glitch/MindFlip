@@ -5,77 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro - MindFlip</title>
+
     <link rel="stylesheet" href="../general.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
+    <!-- HEADER -->
     <header>
         <div class="logo">
-            <img src="../recursos/imagenes/LOGO.png" alt="Logo MindFlip">
-            <span>MindFlip</span>
+            <img src="../recursos/imagenes/LOGO.png" id="imglogo" alt="Logo de MindFlip">
+            <h1>MindFlip</h1>
         </div>
+
         <nav class="menu">
             <a href="../inicio/index.html">Inicio</a>
             <a href="../dificultad/index.html">Jugar</a>
             <a href="../ranking/index.html">Ranking</a>
-            <a href="../perfil/index.html">Mi perfil</a>
+            <a href="../perfil/index.html">Mi Perfil</a>
         </nav>
     </header>
 
+    <!-- CONTENIDO REGISTRO -->
     <main>
-        <section class="registro">
-            <p>MINDFLIP / REGISTRO</p>
-            <h1>Crear cuenta</h1>
-            <p>Regístrate y guarda tus resultados.</p>
 
-            <form id="form_registro">
-                <div class="campo">
-                    <label for="usuario">Nombre de usuario</label>
-                    <input type="text" id="usuario" name="usuario" required>
-                </div>
+        <section class="pagina_registro">
 
-                <div class="campo">
-                    <label for="correo">Correo electrónico</label>
-                    <input type="email" id="correo" name="correo" required>
-                </div>
+            <p class="subtitulo">MINDFLIP / 03 - REGISTRO</p>
+            <h2>Crea tu cuenta</h2>
+            <p>Regístrate para guardar tus partidas y aparecer en el ranking.</p>
 
-                <div class="campo">
-                    <label for="contrasena">Contraseña</label>
-                    <input type="password" id="contrasena" name="contrasena" required>
-                </div>
+            <div class="tarjeta_registro">
 
-                <div class="campo">
-                    <label for="repetir">Confirmar contraseña</label>
-                    <input type="password" id="repetir" name="repetir" required>
-                </div>
+                <form id="form_registro">
 
-                <button type="submit">CREAR CUENTA</button>
-            </form>
+                    <div class="campos_registro">
 
-            <p>¿Ya tienes cuenta?
-                <a href="../login/index.html">Iniciar sesión</a>
-            </p>
+                        <div class="campo">
+                            <label for="registro_usuario">Nombre de usuario</label>
+                            <input type="text" id="registro_usuario" name="usuario"
+                                   placeholder="Elige un usuario" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="registro_correo">Correo electrónico</label>
+                            <input type="email" id="registro_correo" name="correo"
+                                   placeholder="ejemplo@correo.com" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="registro_password">Contraseña</label>
+                            <input type="password" id="registro_password" name="password"
+                                   placeholder="Tu contraseña" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="registro_confirmar">Confirmar contraseña</label>
+                            <input type="password" id="registro_confirmar" name="confirmar"
+                                   placeholder="Repite tu contraseña" required>
+                        </div>
+
+                    </div>
+
+                    <div class="registro_inferior">
+
+                        <div class="imagen_perfil">
+                            <label for="registro_foto">Imagen de perfil</label>
+
+                            <div class="elegir_imagen">
+                                <span class="avatar_pequeno">●</span>
+                                <input type="file" id="registro_foto" name="foto" accept="image/*">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="boton_principal">
+                            CREAR CUENTA
+                        </button>
+
+                    </div>
+
+                </form>
+
+                <p class="acceso_login">
+                    ¿Ya tienes una cuenta?
+                    <a href="../inicio/index.html">Iniciar sesión</a>
+                </p>
+
+            </div>
+
         </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
+
         <div class="footer_contenido">
-            <div class="footer_logo">
-                <h2>MindFlip</h2>
-                <p>JUEGO DE MEMORIA</p>
-                <p>♥ ♠ ♦ ♣</p>
-                <p>Entrena tu memoria y diviértete.</p>
-            </div>
 
             <div class="footer_navegacion">
                 <h3>Navegación</h3>
                 <nav class="menu_footer_nav">
-                    <a href="../inicio/index.html">Inicio</a>
-                    <a href="../dificultad/index.html">Jugar</a>
-                    <a href="../ranking/index.html">Ranking</a>
-                    <a href="../Bienvenido/index.html">Cómo jugar</a>
+                    <div class="enlaces_footer_nav">
+                        <a href="../inicio/index.html">Inicio</a>
+                        <a href="../dificultad/index.html">Jugar</a>
+                        <a href="../ranking/index.html">Ranking</a>
+                        <a href="../Bienvenido/index.html">Cómo jugar</a>
+                    </div>
                 </nav>
             </div>
 
@@ -84,7 +120,7 @@
                 <div class="enlaces_footer_sup">
                     <span>Ayuda</span>
                     <span>Contacto</span>
-                    <span>Privacidad</span>
+                    <span>Política de privacidad</span>
                     <span>Términos de uso</span>
                 </div>
             </div>
@@ -92,18 +128,27 @@
             <div class="footer_redes">
                 <h3>Síguenos</h3>
                 <div class="redes_sociales">
-                    <a href="https://discord.com" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
-                    <a href="https://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://github.com" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://youtube.com" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://discord.com" aria-label="Discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://youtube.com" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
                 </div>
             </div>
+
         </div>
 
         <div class="footer_inferior">
             <p>&copy; 2026 MindFlip. Todos los derechos reservados.</p>
-            <p>RETO 1 / 2.º DAW</p>
         </div>
+
     </footer>
 
     <script src="script.js" defer></script>
