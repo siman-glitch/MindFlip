@@ -1,0 +1,5 @@
+.tarjeta_registro{
+    background: #ebdbb6;
+display: flex;
+flex-direction: column;
+}
