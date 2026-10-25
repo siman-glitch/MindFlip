@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jugar - MindFlip</title>
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../recursos/imagenes/LOGO.png" alt="Logo MindFlip">
+            <span>MindFlip</span>
+        </div>
+        <nav class="menu">
+            <a href="../inicio/index.html">Inicio</a>
+            <a href="../dificultad/index.html">Jugar</a>
+            <a href="../ranking/index.html">Ranking</a>
+            <a href="../perfil/index.html">Mi perfil</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="juego">
+
+            <h1>Encuentra las parejas</h1>
+            <p>Gira las cartas y encuentra todas las parejas.</p>
+
+            <div class="informacion_partida">
+
+                <div class="nivel_actual">
+                    <h2>Nivel</h2>
+                    <p id="nivel">Fácil</p>
+                </div>
+
+                <div class="tiempo">
+                    <h2>Tiempo</h2>
+                    <p id="cronometro">00:00</p>
+                </div>
+
+                <div class="intentos">
+                    <h2>Intentos</h2>
+                    <p id="intentos">0</p>
+                </div>
+
+                <div class="parejas">
+                    <h2>Parejas</h2>
+                    <p id="parejas_encontradas">0</p>
+                </div>
+
+            </div>
+
+            <!-- Las cartas se crearán con JavaScript -->
+            <div class="tablero" id="tablero"></div>
+
+            <div class="controles">
+                <button type="button" id="reiniciar">
+                    Reiniciar partida
+                </button>
+
+                <a href="../dificultad/index.html">
+                    Cambiar dificultad
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer_contenido">
+            <div class="footer_logo">
+                <h2>MindFlip</h2>
+                <p>JUEGO DE MEMORIA</p>
+                <p>♥ ♠ ♦ ♣</p>
+                <p>Entrena tu memoria y diviértete.</p>
+            </div>
+
+            <div class="footer_navegacion">
+                <h3>Navegación</h3>
+                <nav class="menu_footer_nav">
+                    <a href="../inicio/index.html">Inicio</a>
+                    <a href="../dificultad/index.html">Jugar</a>
+                    <a href="../ranking/index.html">Ranking</a>
+                    <a href="../Bienvenido/index.html">Cómo jugar</a>
+                </nav>
+            </div>
+
+            <div class="footer_soporte">
+                <h3>Soporte</h3>
+                <div class="enlaces_footer_sup">
+                    <span>Ayuda</span>
+                    <span>Contacto</span>
+                    <span>Privacidad</span>
+                    <span>Términos de uso</span>
+                </div>
+            </div>
+
+            <div class="footer_redes">
+                <h3>Síguenos</h3>
+                <div class="redes_sociales">
+                    <a href="https://discord.com" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://instagram.com" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://youtube.com" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_inferior">
+            <p>&copy; 2026 MindFlip. Todos los derechos reservados.</p>
+            <p>RETO 1 / 2.º DAW</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
