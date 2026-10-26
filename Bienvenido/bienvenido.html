@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido - MindFlip</title>
+
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- LOGO Y MENU -->
+    <header>
+
+        <div class="logo">
+            <img src="../recursos/imagenes/LOGO.png" id="imglogo" alt="Logo de MindFlip">
+            <h1>MindFlip</h1>
+        </div>
+
+        <nav class="menu">
+            <a href="../inicio/index.html">Inicio</a>
+            <a href="../dificultad/index.html">Jugar</a>
+            <a href="../ranking/index.html">Ranking</a>
+            <a href="../perfil/index.html">Mi perfil</a>
+        </nav>
+
+    </header>
+
+
+    <!-- CONTENIDO DE BIENVENIDO -->
+    <main>
+
+        <section class="pagina_bienvenido">
+
+            <p class="subtitulo">MINDFLIP / 02 - BIENVENIDO</p>
+
+            <h2>¡Bienvenido a MindFlip!</h2>
+
+            <p>Entrena tu memoria, encuentra las parejas y supera tus récords.</p>
+
+            <div class="contenido_bienvenido">
+
+                <!-- PROXIMA PARTIDA -->
+                <article class="tarjeta_partida">
+
+                    <h3>¿Preparado para jugar?</h3>
+
+                    <p>Elige un nivel y empieza una nueva partida.</p>
+
+                    <div class="imagenes_partida">
+                        <img src="../recursos/imagenes/01_simple_corazon.png" alt="Carta corazón">
+                        <img src="../recursos/imagenes/02_simple_pica.png" alt="Carta pica">
+                        <img src="../recursos/imagenes/03_simple_diamante.png" alt="Carta diamante">
+                        <img src="../recursos/imagenes/04_simple_trebol.png" alt="Carta trébol">
+                    </div>
+
+                    <a href="../dificultad/index.html" class="boton_jugar">
+                        JUGAR AHORA
+                    </a>
+
+                </article>
+
+
+                <!-- ESTADISTICAS DEL JUGADOR -->
+                <aside class="estadisticas_bienvenido">
+
+                    <h3>Tu progreso</h3>
+
+                    <div class="dato_estadistica">
+                        <p>Mejor puntuación</p>
+                        <strong id="mejor_puntuacion">1250</strong>
+                    </div>
+
+                    <div class="dato_estadistica">
+                        <p>Partidas jugadas</p>
+                        <strong id="partidas_jugadas">14</strong>
+                    </div>
+
+                    <div class="dato_estadistica">
+                        <p>Parejas encontradas</p>
+                        <strong id="parejas_encontradas">86</strong>
+                    </div>
+
+                    <div class="enlaces_bienvenido">
+                        <a href="../ranking/index.html">VER RANKING</a>
+                        <a href="../perfil/index.html">MI PERFIL</a>
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER DE LA PAGINA -->
+    <footer class="footer">
+
+        <div class="footer_contenido">
+
+            <!-- NAVEGACION FOOTER -->
+            <div class="footer_navegacion">
+
+                <h3>Navegación</h3>
+
+                <nav class="menu_footer_nav">
+
+                    <div class="enlaces_footer_nav">
+                        <a href="../inicio/index.html">Inicio</a>
+                        <a href="../dificultad/index.html">Jugar</a>
+                        <a href="../ranking/index.html">Ranking</a>
+                        <a href="../Bienvenido/index.html">Cómo jugar</a>
+                    </div>
+
+                </nav>
+
+            </div>
+
+
+            <!-- SOPORTE -->
+            <div class="footer_soporte">
+
+                <h3>Soporte</h3>
+
+                <div class="enlaces_footer_sup">
+                    <span>Ayuda</span>
+                    <span>Contacto</span>
+                    <span>Política de privacidad</span>
+                    <span>Términos de uso</span>
+                </div>
+
+            </div>
+
+
+            <!-- REDES SOCIALES -->
+            <div class="footer_redes">
+
+                <h3>Síguenos</h3>
+
+                <div class="redes_sociales">
+
+                    <a href="https://discord.com" aria-label="Discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="https://github.com" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                    <a href="https://youtube.com" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <div class="footer_inferior">
+            <p>&copy; 2026 MindFlip. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
