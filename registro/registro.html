@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="registro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
 
     <!-- HEADER -->
@@ -20,7 +21,7 @@
         </div>
 
         <nav class="menu">
-            <a href="../inicio/index.html">Inicio</a>
+            <a href="../inicio/inicio.html">Inicio</a>
             <a href="../dificultad/index.html">Jugar</a>
             <a href="../ranking/index.html">Ranking</a>
             <a href="../perfil/index.html">Mi Perfil</a>
@@ -44,40 +45,47 @@
 
                         <div class="campo">
                             <label for="registro_usuario">Nombre de usuario</label>
-                            <input type="text" id="registro_usuario" name="usuario"
-                                   placeholder="Elige un usuario" required>
+                            <input type="text" id="registro_usuario" name="usuario" placeholder="Elige un usuario"
+                                required>
                         </div>
 
                         <div class="campo">
                             <label for="registro_correo">Correo electrónico</label>
-                            <input type="email" id="registro_correo" name="correo"
-                                   placeholder="ejemplo@correo.com" required>
+                            <input type="email" id="registro_correo" name="correo" placeholder="ejemplo@correo.com"
+                                required>
                         </div>
 
                         <div class="campo">
                             <label for="registro_password">Contraseña</label>
-                            <input type="password" id="registro_password" name="password"
-                                   placeholder="Tu contraseña" required>
+                            <input type="password" id="registro_password" name="password" placeholder="Tu contraseña"
+                                required>
                         </div>
 
                         <div class="campo">
                             <label for="registro_confirmar">Confirmar contraseña</label>
                             <input type="password" id="registro_confirmar" name="confirmar"
-                                   placeholder="Repite tu contraseña" required>
+                                placeholder="Repite tu contraseña" required>
                         </div>
 
                     </div>
 
                     <div class="registro_inferior">
 
+
                         <div class="imagen_perfil">
-                            <label for="registro_foto">Imagen de perfil</label>
+                            <label>Imagen de perfil</label>
 
                             <div class="elegir_imagen">
-                                <span class="avatar_pequeno">●</span>
-                                <input type="file" id="registro_foto" name="foto" accept="image/*">
+                                <span class="avatar_pequeno">👤</span>
+
+                                <label for="registro_foto" class="boton_imagen">
+                                    Elegir imagen
+                                </label>
+
+                                <input type="file" id="registro_fsoto" name="foto" accept="image/*">
                             </div>
                         </div>
+
 
                         <button type="submit" class="boton_principal">
                             CREAR CUENTA
@@ -89,7 +97,7 @@
 
                 <p class="acceso_login">
                     ¿Ya tienes una cuenta?
-                    <a href="../inicio/index.html">Iniciar sesión</a>
+                    <a href="../inicio/inicio.html">Iniciar sesión</a>
                 </p>
 
             </div>
@@ -153,4 +161,5 @@
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
