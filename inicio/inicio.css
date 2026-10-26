@@ -102,6 +102,9 @@ font-family: Arial, sans-serif;
     color: #45070b;
 
 }
+.campo small{
+    color: red;
+}
 
 .formulario h1 {
     color: #45070b;

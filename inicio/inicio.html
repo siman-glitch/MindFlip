@@ -74,14 +74,17 @@
                     <div class="campo">
                         <label for="nombre">Nombre de usuario</label>
                         <input type="text" name="nombre" id="nombre" placeholder="Tu usuario" required>
+                        <small id="errorNombre"></small>
                     </div>
 
                     <div class="campo">
                         <label for="contrasena">Contraseña</label>
                         <input type="password" name="contrasena" id="contrasena" placeholder="Tu contraseña" required>
+                                            <small id="errorPassword"></small>
+
                     </div>
 
-                    <button type="submit">INICIAR SESIÓN</button>
+                    <button type="submit" id="inicioSesion">INICIAR SESIÓN</button>
 
                 </form>
 
@@ -163,7 +166,8 @@
 
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="../general.js" ></script>
+    <script src="inicio.js" ></script>
 
 </body>
 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -53,6 +54,7 @@
                             <label for="registro_correo">Correo electrónico</label>
                             <input type="email" id="registro_correo" name="correo" placeholder="ejemplo@correo.com"
                                 required>
+                            <small id="error_correo" style="color: red"></small>
                         </div>
 
                         <div class="campo">
@@ -65,32 +67,32 @@
                             <label for="registro_confirmar">Confirmar contraseña</label>
                             <input type="password" id="registro_confirmar" name="confirmar"
                                 placeholder="Repite tu contraseña" required>
+
+                            <!-- Mensaje si las contraseñas no coinciden -->
+                            <small id="error_password" style="color: red;"></small>
                         </div>
 
                     </div>
 
-                    <div class="registro_inferior">
+                    <div class="imagen_perfil">
+                        <p>Imagen de perfil</p>
 
+                        <div class="elegir_imagen">
+                            <span class="avatar_pequeno">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
 
-                        <div class="imagen_perfil">
-                            <label>Imagen de perfil</label>
+                            <input type="file" id="imagen" accept="image/*" hidden>
 
-                            <div class="elegir_imagen">
-                                <span class="avatar_pequeno">👤</span>
-
-                                <label for="registro_foto" class="boton_imagen">
-                                    Elegir imagen
-                                </label>
-
-                                <input type="file" id="registro_fsoto" name="foto" accept="image/*">
-                            </div>
+                            <label for="imagen" class="boton_imagen">
+                                Elegir imagen
+                            </label>
                         </div>
+                    </div>
 
-
-                        <button type="submit" class="boton_principal">
-                            CREAR CUENTA
-                        </button>
-
+                    <div class="registro_inferior">
+                        <button type="submit" class="boton_principal">CREAR CUENTA</button>
+                        <small id="mensaje_registro" style="color: red;"></small>
                     </div>
 
                 </form>
@@ -159,7 +161,8 @@
 
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="../general.js"></script>
+    <script src="registro.js"></script>
 </body>
 
 </html>

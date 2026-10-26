@@ -1,14 +1,16 @@
-
 /* ===== PAGINA REGISTRO ===== */
 
 .pagina_registro {
     padding: 50px;
     box-sizing: border-box;
+
 }
+
 
 /* Textos */
 .pagina_registro p {
     color: wheat;
+    font-size: 20px;
 }
 
 .pagina_registro h2 {
@@ -21,14 +23,22 @@
 .tarjeta_registro {
     display: flex;
     flex-direction: column;
-    margin: 50px;
+    /* La tarjeta ocupa el 90% del ancho disponible */
+
+    width: 90%;
+    /* La tarjeta no puede superar los 800px de ancho */
+
+    max-width: 800px;
+    /* 50px de margen arriba y abajo, auto la centra horizontalmente */
+
+    margin: 50px auto;
+
     padding: 20px;
     box-sizing: border-box;
     background: rgb(233, 210, 191);
     border: 1px solid rgb(240, 218, 17);
     border-radius: 20px;
 }
-
 
 /* ===== GRID: CAMPOS DEL FORMULARIO ===== */
 
@@ -53,11 +63,55 @@
     color: #540508;
 }
 
+/* Ocultar boton original "Choisir un fichier" */
+.elegir_imagen input[type="file"] {
+    display: none;
+    /* Kaykhbi input original, bla ma n7ydo mn HTML */
+}
+
+
+/* ===== BOTON CREAR CUENTA ===== */
+
+
+.boton_principal {
+    background: linear-gradient(to bottom, #FEE49B, #EBAE3B);
+    width: 50%;
+    border: 1px solid rgb(240, 218, 17);
+    border-radius: 10px;
+    padding: 20px;
+    color: black;
+    /**/
+    display: block;
+    margin: 20px auto;
+}
+
+
+/* ===== ENLACE INICIAR SESION ===== */
+
+.acceso_login {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tarjeta_registro .acceso_login {
+    color: red;
+}
+
+.acceso_login a {
+    text-decoration: none;
+    color: red;
+}
+
+
+
 
 /* ===== IMAGEN DE PERFIL ===== */
-
 .imagen_perfil {
     margin: 20px 0;
+    color: #540508;
+}
+.imagen_perfil p{
     color: #540508;
 }
 
@@ -88,40 +142,4 @@
 
     cursor: pointer;
     /* Souris katwlli yed mlli ndouzo fo9 boton */
-}
-
-/* Ocultar boton original "Choisir un fichier" */
-.elegir_imagen input[type="file"] {
-    display: none;
-    /* Kaykhbi input original, bla ma n7ydo mn HTML */
-}
-
-
-/* ===== BOTON CREAR CUENTA ===== */
-
-.boton_principal {
-    background: linear-gradient(to bottom, #FEE49B, #EBAE3B);
-    width: 50%;
-    border: 1px solid rgb(240, 218, 17);
-    border-radius: 10px;
-    padding: 20px;
-    color: black;
-}
-
-
-/* ===== ENLACE INICIAR SESION ===== */
-
-.acceso_login {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.tarjeta_registro .acceso_login {
-    color: red;
-}
-
-.acceso_login a {
-    text-decoration: none;
-    color: red;
 }
