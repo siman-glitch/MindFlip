@@ -55,6 +55,10 @@ formRegistro.addEventListener("submit", function (evento) {
             // "usuarios": clave donde guardamos los datos
             // JSON.stringify(): convierte el array en texto
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
+             // >>> AÑADE ESTAS DOS LÍNEAS JUSTO AQUÍ <<<
+            // 8.5 Guardar el nombre en la sesión actual y redirigir
+            sessionStorage.setItem("usuario_logueado", user);
+            window.location.href = "../bienvenido/bienvenido.html";
 
             // 9. Mostrar mensaje de éxito
             document.getElementById("mensaje_registro").textContent =
