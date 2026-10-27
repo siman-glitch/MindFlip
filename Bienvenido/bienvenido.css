@@ -1,7 +1,8 @@
 
 /*   CONTENIDO PRINCIPAL */
 
-/* Estilos del contenido central de esta página. */
+/* Estilos del contenido central de esta página.
+   No modifica el header ni el footer de general.css. */
 main {
     display: flex;
     flex-direction: column;
@@ -229,4 +230,4 @@ main {
     color: #51080b;
 }
 
-/* adaptacion a pantallas pequeñas*/
+
