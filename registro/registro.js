@@ -1,42 +1,96 @@
 
+/* ==========================================
+   1. OBTENER ELEMENTOS DEL HTML
+========================================== */
+
+let imagen = document.getElementById("imagen");
+let avatar = document.getElementById("avatar");
 let formRegistro = document.getElementById("form_registro");
 
+// Guardar la imagen convertida en texto
+let imagenGuardada = "";
+
+
+/* ==========================================
+   2. MOSTRAR LA IMAGEN DE PERFIL
+========================================== */
+
+// Cuando el usuario elige una imagen
+imagen.addEventListener("change", mostrarImagen);
+
+function mostrarImagen() {
+
+    // Obtener el archivo seleccionado
+    let archivo = imagen.files[0];
+
+    if (archivo) {
+
+        // Comprobar que sea una imagen
+        if (!archivo.type.startsWith("image/")) {
+            alert("Selecciona una imagen válida");
+            return;
+        }
+
+        // Leer la imagen
+        let lector = new FileReader();
+
+        lector.onload = function () {
+
+            // Convertir la imagen en texto Base64
+            imagenGuardada = lector.result;
+
+            // Mostrar la imagen en el avatar
+            avatar.innerHTML = `<img src="${imagenGuardada}" alt="Avatar">`;
+        };
+
+        lector.readAsDataURL(archivo);
+    }
+}
+
+
+/* ==========================================
+   3. FORMULARIO DE REGISTRO
+========================================== */
+
+// Cuando el usuario pulsa "Crear cuenta"
 formRegistro.addEventListener("submit", function (evento) {
+
+    // Evitar que la página se recargue
     evento.preventDefault();
+
+    // Llamar a la función de registro
+    registrarUsuario();
+});
+
+
+/* ==========================================
+   4. FUNCIÓN PARA REGISTRAR USUARIO
+========================================== */
+
+function registrarUsuario() {
 
     // 1. Obtener los datos del formulario
     let user = document.getElementById("registro_usuario").value;
     let email = document.getElementById("registro_correo").value;
-    //files[0]:imagen que ha elegido user
-    let imagen = document.getElementById("imagen");
-    let avatar = document.getElementById("avatar");
     let contrasena = document.getElementById("registro_password").value;
     let confirmoPassw = document.getElementById("registro_confirmar").value;
 
-    
 
-imagen.addEventListener("change",function(){
-let archivo=imagen.files[0];
-
-if(archivo){
-        avatar.innerHTML = `<img src="${URL.createObjectURL(archivo)}" alt="Avatar">`;
-}
-});
-
-
-    
-    
     // 2. Limpiar los mensajes anteriores
     document.getElementById("error_correo").textContent = "";
     document.getElementById("error_password").textContent = "";
     document.getElementById("mensaje_registro").textContent = "";
 
+
     // 3. Comprobar si las contraseñas coinciden
     if (contrasena === confirmoPassw) {
 
-        // Obtener los usuarios guardados en localStorage
+        // Obtener los usuarios guardados
         let usuarios = obtenerUsuarios();
+
+        // Indicar que el correo todavía no existe
         let userExist = false;
+
 
         // 4. Buscar si el correo ya está registrado
         for (let i = 0; i < usuarios.length; i++) {
@@ -47,8 +101,10 @@ if(archivo){
             }
         }
 
-        // 5. Si existe, mostrar mensaje de error
+
+        // 5. Comprobar si el correo existe
         if (userExist) {
+
             document.getElementById("error_correo").textContent =
                 "Ya existe una cuenta con este correo electrónico";
 
@@ -60,26 +116,28 @@ if(archivo){
                 nombre: user,
                 email: email,
                 password: contrasena,
-                imagen: imagen
+                imagen: imagenGuardada
             };
+
 
             // 7. Añadir el usuario al array
             usuarios.push(nuevoUsuario);
 
-            // 8. Convertir el array en texto y guardarlo en localStorage
-            // localStorage: almacenamiento del navegador
-            // setItem(): guarda o actualiza un dato
-            // "usuarios": clave donde guardamos los datos
-            // JSON.stringify(): convierte el array en texto
-            localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-            // 8.5 Guardar el nombre en la sesión actual y redirigir
-            sessionStorage.setItem("usuario_logueado", user);
-            window.location.href = "../bienvenido/bienvenido.html";
+            // 8. Guardar los usuarios en localStorage
+            try {
 
-            // 9. Mostrar mensaje de éxito
-            document.getElementById("mensaje_registro").textContent =
-                "Cuenta creada correctamente";
+                localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+                // 9. Ir a Inicio para iniciar sesión
+                window.location.href = "../inicio/inicio.html";
+
+            } catch (error) {
+
+                // Mostrar error si no hay espacio para guardar
+                document.getElementById("mensaje_registro").textContent =
+                    "No se pudo guardar la cuenta. Prueba con una imagen más pequeña";
+            }
         }
 
     } else {
@@ -88,4 +146,4 @@ if(archivo){
         document.getElementById("error_password").textContent =
             "Las contraseñas no coinciden";
     }
-});
+}

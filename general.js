@@ -1,3 +1,4 @@
+//localStorage → guardar los usuarios registrados.
 // Función para obtener los usuarios guardados en localStorage
 function obtenerUsuarios() {
 
