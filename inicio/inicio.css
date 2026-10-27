@@ -1,0 +1,142 @@
+/*=========clas global==================*/
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*PRESENTACION*/
+.presentacion {
+    display: flex;
+    flex-direction: column;
+}
+
+.presentacion h1 {
+    color: white;
+    font-size: 40px;
+}
+.presentacion p{
+    color: #eabb4c;
+}
+
+.subtitulo   {
+font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #f5c2a3;}
+
+.subtitulo {
+    color: white;
+}
+.imagenes_presentacion{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#img1 {
+    height: 200px;
+}
+
+#img2 {
+    height: 200px;
+}
+
+#img3 {
+    height: 200px;
+}
+
+#img4 {
+    height: 200px;
+}
+/*caracteristicas*/
+.caracteristicas{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.caracteristicas span{
+    border: 2px solid #f0c765 ;
+    border-radius: 40px;
+    color: wheat;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+/*INICIAR SESION*/
+.login {
+    width: 400px;
+    min-height: 520px;
+    background: #eddfc0;
+    padding: 40px;
+    box-sizing: border-box;
+    border: 3px solid rgb(240, 218, 17);
+    border-radius: 20px;
+    margin: 15px;
+    justify-content: center;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5px;
+}
+
+.campo input {
+    width: 100%;
+    border: 1px solid rgb(240, 218, 17);
+    border-radius: 10px;
+    padding: 10px;
+}
+.campo input:required{
+    border-color: red;
+}
+.campo label {
+    color: #45070b;
+
+}
+.campo small{
+    color: red;
+}
+
+.formulario h1 {
+    color: #45070b;
+}
+
+.formulario p {
+    color: red;
+
+}
+
+.formulario button {
+    padding: 10px;
+    box-sizing: border-box;
+    background: #eabb4c;
+    border-radius: 10px;
+    margin: 10px 10px;
+    width: 100%;
+}
+/*REGISTRO DENTRO DEL FORM*/
+.registro{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+.registro p{
+    color: #7c0b12;
+}
+.registro a{
+    color: #7c0b12;
+    text-decoration: none;
+}
+.registro a:hover{
+ color: #eabb4c;
+}

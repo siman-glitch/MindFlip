@@ -1,0 +1,233 @@
+
+/*   CONTENIDO PRINCIPAL */
+
+/* Estilos del contenido central de esta página.
+   No modifica el header ni el footer de general.css. */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 4.5% 50px;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   PRESENTACIÓN DEL JUGADOR
+   ========================================= */
+
+/* Bloque que contiene el subtítulo,
+   el título de bienvenida y el mensaje. */
+.presentacion {
+    display: block;
+    width: 100%;
+}
+
+/* Texto pequeño que aparece encima del título. */
+.presentacion .subtitulo {
+    color: #ffe4a5;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin: 0 0 22px;
+}
+
+/* Título principal de bienvenida. */
+.presentacion h1 {
+    color: #fff8e9;
+    font-size: 54px;
+    margin: 0 0 8px;
+}
+
+/* Mensaje que aparece debajo del título. */
+.presentacion p {
+    color: #f1d9bd;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+/* =========================================
+   PANEL DEL JUGADOR
+   ========================================= */
+
+/* Organiza el cuadro de la partida a la izquierda
+   y las estadísticas a la derecha. */
+.panel_jugador {
+    display: grid;
+
+    /* Crea dos columnas: la primera tiene el doble
+       de espacio que la segunda. */
+    grid-template-columns: 2fr 1fr;
+
+    gap: 34px;
+    width: 100%;
+    max-width: 1300px;
+
+    /* Centra el panel cuando tiene un ancho máximo. */
+    align-self: center;
+}
+
+/* =========================================
+   CUADRO "TU PRÓXIMA PARTIDA"
+   ========================================= */
+
+/* Esta clase da forma al cuadro completo.
+   El HTML coloca dentro el título, las cartas y el enlace. */
+.proxima_partida {
+    background-color: #fff9eb;
+    color: #51080b;
+    border: 2px solid #ffc94f;
+    border-radius: 22px;
+
+    /* Espacio entre el contenido y los bordes. */
+    padding: 25px 35px 20px;
+
+    /* El padding y el borde se incluyen en el tamaño
+       calculado del elemento. */
+    box-sizing: border-box;
+
+    /* Añade una sombra debajo del cuadro. */
+    box-shadow: 5px 7px 0 rgba(60, 0, 0, 0.3);
+}
+
+/* Título del cuadro de la partida. */
+.proxima_partida h2 {
+    font-size: 38px;
+    margin: 0 0 8px;
+}
+
+/* Texto descriptivo del cuadro. */
+.proxima_partida p {
+    color: #826b61;
+    font-size: 18px;
+    margin: 0 0 30px;
+}
+
+/* =========================================
+   IMÁGENES DE LAS CARTAS
+   ========================================= */
+
+/* Coloca las imágenes en una fila y deja espacio
+   entre ellas. Si no caben, pueden pasar a otra fila. */
+.cartas_presentacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    margin: 0 0 28px;
+}
+
+/* Estilos individuales de cada imagen de carta. */
+.cartas_presentacion img {
+    width: 145px;
+    height: 155px;
+
+    /* Mantiene las proporciones de la imagen
+       sin deformarla. */
+    object-fit: contain;
+
+    background-color: #fff9eb;
+    border: 4px solid #ffc94f;
+    border-radius: 17px;
+    padding: 8px;
+    box-sizing: border-box;
+
+    /* Sombra pequeña debajo de cada carta. */
+    box-shadow: 0 5px 0 #d0c3b0;
+}
+
+/* =========================================
+   ENLACE "JUGAR AHORA"
+   ========================================= */
+
+/* Es un enlace <a> que lleva a la página de dificultad.
+   Con CSS hacemos que visualmente parezca un botón. */
+.boton_jugar {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #3e160b;
+    font-size: 18px;
+    font-weight: bold;
+
+    /* Degradado de amarillo claro a dorado. */
+    background: linear-gradient(to bottom, #ffe7a0, #f3b52e);
+
+    border: 2px solid #fff0bf;
+    border-radius: 17px;
+    padding: 14px;
+}
+
+/* Cambia el fondo cuando pasamos el ratón por encima. */
+.boton_jugar:hover {
+    background: #ffd36b;
+}
+
+/* =========================================
+   COLUMNA DE ESTADÍSTICAS
+   ========================================= */
+
+/* Organiza los cuadros y enlaces uno debajo del otro. */
+.estadisticas {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Cada elemento con esta clase es un cuadro
+   independiente de estadísticas. */
+.estadistica {
+    background-color: #6b1013;
+    border: 1px solid #bd9437;
+    border-radius: 16px;
+    padding: 18px;
+}
+
+/* Descripción de cada estadística. */
+.estadistica p {
+    color: #f0d9b6;
+    font-size: 14px;
+    margin: 0 0 5px;
+}
+
+/* Valor numérico de cada estadística. */
+.estadistica h2 {
+    color: #ffd36b;
+    font-size: 34px;
+    margin: 0;
+}
+
+/* =========================================
+   ENLACES "VER RANKING" Y "MI PERFIL"
+   ========================================= */
+
+/* les ponemos los mismos estilos */
+.boton_ranking,
+.boton_perfil {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    border: 2px solid #ffc94f;
+    border-radius: 17px;
+    padding: 16px;
+}
+
+/* Estilo específico del enlace al ranking. */
+.boton_ranking {
+    background-color: #fff9eb;
+    color: #51080b;
+}
+
+/* Estilo específico del enlace al perfil. */
+.boton_perfil {
+    background-color: #6b1013;
+    color: white;
+}
+
+/* Efecto al pasar el ratón por encima de los enlaces. */
+.boton_ranking:hover,
+.boton_perfil:hover {
+    background-color: #ffd36b;
+    color: #51080b;
+}
+
+/* adaptacion a pantallas pequeñas*/

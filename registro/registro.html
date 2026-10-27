@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - MindFlip</title>
+
+    <link rel="stylesheet" href="../general.css">
+    <link rel="stylesheet" href="registro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="../recursos/imagenes/LOGO.png" id="imglogo" alt="Logo de MindFlip">
+            <h1>MindFlip</h1>
+        </div>
+
+        <nav class="menu">
+            <a href="../inicio/inicio.html">Inicio</a>
+            <a href="../dificultad/index.html">Jugar</a>
+            <a href="../ranking/index.html">Ranking</a>
+            <a href="../perfil/index.html">Mi Perfil</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO REGISTRO -->
+    <main>
+
+        <section class="pagina_registro">
+
+            <p class="subtitulo">MINDFLIP / 03 - REGISTRO</p>
+            <h2>Crea tu cuenta</h2>
+            <p>Regístrate para guardar tus partidas y aparecer en el ranking.</p>
+
+            <div class="tarjeta_registro">
+
+                <form id="form_registro">
+
+                    <div class="campos_registro">
+
+                        <div class="campo">
+                            <label for="registro_usuario">Nombre de usuario</label>
+                            <input type="text" id="registro_usuario" name="usuario" placeholder="Elige un usuario"
+                                required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="registro_correo">Correo electrónico</label>
+                            <input type="email" id="registro_correo" name="correo" placeholder="ejemplo@correo.com"
+                                required>
+                            <small id="error_correo" style="color: red"></small>
+                        </div>
+
+                        <div class="campo">
+                            <label for="registro_password">Contraseña</label>
+                            <input type="password" id="registro_password" name="password" placeholder="Tu contraseña"
+                                required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="registro_confirmar">Confirmar contraseña</label>
+                            <input type="password" id="registro_confirmar" name="confirmar"
+                                placeholder="Repite tu contraseña" required>
+
+                            <!-- Mensaje si las contraseñas no coinciden -->
+                            <small id="error_password" style="color: red;"></small>
+                        </div>
+
+                    </div>
+
+                    <div class="imagen_perfil">
+                        <p>Imagen de perfil</p>
+
+                        <div class="elegir_imagen">
+                            <span class="avatar_pequeno">
+                                <i class="fa-solid fa-user"></i>
+                            </span>
+
+                            <input type="file" id="imagen" accept="image/*" hidden>
+
+                            <label for="imagen" class="boton_imagen">
+                                Elegir imagen
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="registro_inferior">
+                        <button type="submit" class="boton_principal">CREAR CUENTA</button>
+                        <small id="mensaje_registro" style="color: red;"></small>
+                    </div>
+
+                </form>
+
+                <p class="acceso_login">
+                    ¿Ya tienes una cuenta?
+                    <a href="../inicio/inicio.html">Iniciar sesión</a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer_contenido">
+
+            <div class="footer_navegacion">
+                <h3>Navegación</h3>
+                <nav class="menu_footer_nav">
+                    <div class="enlaces_footer_nav">
+                        <a href="../inicio/inicio.html">Inicio</a>
+                        <a href="../dificultad/index.html">Jugar</a>
+                        <a href="../ranking/index.html">Ranking</a>
+                        <a href="../Bienvenido/index.html">Cómo jugar</a>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="footer_soporte">
+                <h3>Soporte</h3>
+                <div class="enlaces_footer_sup">
+                    <span>Ayuda</span>
+                    <span>Contacto</span>
+                    <span>Política de privacidad</span>
+                    <span>Términos de uso</span>
+                </div>
+            </div>
+
+            <div class="footer_redes">
+                <h3>Síguenos</h3>
+                <div class="redes_sociales">
+                    <a href="https://discord.com" aria-label="Discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="https://instagram.com" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://youtube.com" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer_inferior">
+            <p>&copy; 2026 MindFlip. Todos los derechos reservados.</p>
+        </div>
+
+    </footer>
+
+    <script src="../general.js"></script>
+    <script src="registro.js"></script>
+</body>
+
+</html>
