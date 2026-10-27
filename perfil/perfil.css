@@ -17,18 +17,70 @@
 
 }
 
+
+.subtitulo {
+    margin: 20px;
+    letter-spacing: 10px;
+}
+
+.pagina_perfil h2 {
+    margin: 20px;
+    font-size: 40px;
+}
+.pagina_perfil p {
+    margin: 20px;
+    font-size: 20px;
+}
 /*===============Parte imagen===========================*/
+/* Tarjeta del jugador */
 .tarjeta_jugador {
     background: rgb(241, 221, 184);
     border: 3px solid rgb(240, 218, 17);
     border-radius: 20px;
-    width: 80%;
-
-
     padding: 30px;
+
+    display: flex;
+    /* Organizar elementos */
+    flex-direction: column;
+    /* Uno debajo de otro */
+    align-items: center;
+    /* Centrar horizontalmente */
+    gap: 12px;
+    /* Espacio entre elementos */
+    text-align: center;
+}
+
+/* Círculo del avatar */
+.avatar {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ce9f32;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #a33a2a;
+}
+
+/* Botón para cambiar foto */
+.boton_cambiar_foto {
+    display: block;
+    background: #bd2026;
+    color: white;
+    padding: 12px 30px;
+    border: 2px solid #ce9f32;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 70%;
     box-sizing: border-box;
 }
 
+/* Estadísticas */
+.resumen_perfil {
+    margin-top: 10px;
+}
 
 /*===============Parte form===========================*/
 
@@ -42,17 +94,19 @@
     border-radius: 20px;
 
 }
-.datos_personales h3{
+
+.datos_personales h3 {
     color: #850E16;
-font-size: 30px;
+    font-size: 30px;
 }
 
 .campo {
     display: flex;
     flex-direction: column;
-gap: 8px;
+    gap: 8px;
 }
-.campo label{
+
+.campo label {
     color: #850E16;
 }
 
@@ -65,12 +119,14 @@ gap: 8px;
 
 
 }
-.campos_perfil input{
-      border: 3px solid rgb(240, 218, 17);
+
+.campos_perfil input {
+    border: 3px solid rgb(240, 218, 17);
     border-radius: 20px;
     padding: 8px;
     box-sizing: border-box;
 }
+
 .boton_principal {
     padding: 20px;
     color: black;
@@ -78,9 +134,12 @@ gap: 8px;
     box-sizing: border-box;
     border: 3px solid rgb(240, 218, 17);
     border-radius: 20px;
-     width: 50%;         /* El botón ocupa la mitad del ancho */
-    display: block;     /* Permite centrarlo usando margin */
-    margin: 20px auto;  /* 20px arriba y abajo, auto lo centra horizontalmente */
+    width: 50%;
+    /* El botón ocupa la mitad del ancho */
+    display: block;
+    /* Permite centrarlo usando margin */
+    margin: 20px auto;
+    /* 20px arriba y abajo, auto lo centra horizontalmente */
 }
 
 .boton_principal:hover {
