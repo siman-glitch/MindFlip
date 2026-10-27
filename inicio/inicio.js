@@ -6,7 +6,23 @@ let btnLogin = document.getElementById('inicioSesion');
 btnLogin.addEventListener("Submit", function (evento) {
     // Evita el envío automático del formulario
     evento.preventDefault();
-    let user = document.getElementById('nombre').value;
+    let NombreUsuario = document.getElementById('nombre').value;
     let password = document.getElementById('contrasena').value;
+
+    //obtener los usuaarios guardados
+    let usuarios = obtenerUsuarios();
+
+    //check si ell usuario y password correcto
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].nombre === NombreUsuario && usuarios[i].password === password) {
+        //password+user=correcto---> ala pagina de bienvenido
+        window.location.href="../Bienvenido/indexedDB.html";
+    break;
+    }
+
+
+
+    }
+
 
 });

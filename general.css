@@ -75,7 +75,7 @@ header {
     display: flex;
     flex-direction: column;
     background-color: #850E16;
-
+    margin-top: auto;
 
 }
 

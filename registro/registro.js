@@ -42,7 +42,8 @@ formRegistro.addEventListener("submit", function (evento) {
             let nuevoUsuario = {
                 id: crypto.randomUUID(),
                 nombre: user,
-                email: email
+                email: email,
+                password: contrasena
             };
 
             // 7. Añadir el usuario al array
