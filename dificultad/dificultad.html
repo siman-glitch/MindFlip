@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dificultad - MindFlip</title>
 
+    <!-- CORREGIDO: Tenías "general.js" en un enlace de hoja de estilo CSS -->
     <link rel="stylesheet" href="../general.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dificultad.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
@@ -19,11 +19,12 @@
             <h1>MindFlip</h1>
         </div>
 
+        <!-- CORREGIDO: Apuntar a tus archivos reales (.html) en lugar de carpetas genéricas (/index.html) -->
         <nav class="menu">
-            <a href="../inicio/index.html">Inicio</a>
-            <a href="../dificultad/index.html">Jugar</a>
-            <a href="../ranking/index.html">Ranking</a>
-            <a href="../perfil/index.html">Mi Perfil</a>
+            <a href="../inicio/inicio.html">Inicio</a>
+            <a href="../dificultad/dificultad.html">Jugar</a>
+            <a href="../ranking/ranking.html">Ranking</a>
+            <a href="../perfil/perfil.html">Mi Perfil</a>
         </nav>
     </header>
 
@@ -45,14 +46,13 @@
                     <p>6 parejas - 12 cartas</p>
 
                     <div class="cartas_nivel cartas_facil">
-                        <span>?</span><span>?</span><span>?</span><span>?</span>
-                        <span>?</span><span>?</span><span>?</span><span>?</span>
-                        <span>?</span><span>?</span><span>?</span><span>?</span>
+                         <img src="../recursos/imagenes/nivel_facil.png" alt="Contenedor cartas fácil">
                     </div>
 
-                    <a href="../juego/index.html?nivel=facil" class="boton_nivel">
+                    <!-- CORREGIDO: Convertido en botón con atributo de datos para que sea capturado limpiamente por tu JS -->
+                    <button class="boton_nivel" data-nivel="facil">
                         JUGAR EN ESTE NIVEL
-                    </a>
+                    </button>
 
                 </article>
 
@@ -63,15 +63,13 @@
                     <p>8 parejas - 16 cartas</p>
 
                     <div class="cartas_nivel cartas_medio">
-                        <span>?</span><span>?</span><span>?</span><span>?</span>
-                        <span>?</span><span>?</span><span>?</span><span>?</span>
-                        <span>?</span><span>?</span><span>?</span><span>?</span>
-                        <span>?</span><span>?</span><span>?</span><span>?</span>
+                         <img src="../recursos/imagenes/nivel_medio.png" alt="Contenedor cartas medio">
                     </div>
 
-                    <a href="../juego/index.html?nivel=medio" class="boton_nivel">
+                    <!-- CORREGIDO: Igual a la tarjeta anterior -->
+                    <button class="boton_nivel" data-nivel="medio">
                         JUGAR EN ESTE NIVEL
-                    </a>
+                    </button>
 
                 </article>
 
@@ -82,15 +80,13 @@
                     <p>12 parejas - 24 cartas</p>
 
                     <div class="cartas_nivel cartas_dificil">
-                        <span>?</span><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span>
-                        <span>?</span><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span>
-                        <span>?</span><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span>
-                        <span>?</span><span>?</span><span>?</span><span>?</span><span>?</span><span>?</span>
+                         <img src="../recursos/imagenes/nivel_dificil.png" alt="Contenedor cartas difícil">
                     </div>
 
-                    <a href="../juego/index.html?nivel=dificil" class="boton_nivel">
+                    <!-- CORREGIDO: Igual a la tarjeta anterior -->
+                    <button class="boton_nivel" data-nivel="dificil">
                         JUGAR EN ESTE NIVEL
-                    </a>
+                    </button>
 
                 </article>
 
@@ -108,11 +104,12 @@
             <div class="footer_navegacion">
                 <h3>Navegación</h3>
                 <nav class="menu_footer_nav">
+                    <!-- CORREGIDO: Cambiados los enlaces del footer hacia tus páginas reales .html -->
                     <div class="enlaces_footer_nav">
-                        <a href="../inicio/index.html">Inicio</a>
-                        <a href="../dificultad/index.html">Jugar</a>
-                        <a href="../ranking/index.html">Ranking</a>
-                        <a href="../Bienvenido/index.html">Cómo jugar</a>
+                        <a href="../inicio/inicio.html">Inicio</a>
+                        <a href="../dificultad/dificultad.html">Jugar</a>
+                        <a href="../ranking/ranking.html">Ranking</a>
+                        <a href="../bienvenido/bienvenido.html">Cómo jugar</a>
                     </div>
                 </nav>
             </div>
@@ -153,6 +150,6 @@
 
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="dificultad.js" defer></script>
 </body>
 </html>
