@@ -127,10 +127,19 @@
 }
 
 .avatar_pequeno {
-    background: #F5DDAF;
-    padding: 10px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    /* Kaydir fondo mdawer */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar_pequeno img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .boton_imagen {
