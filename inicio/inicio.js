@@ -23,7 +23,7 @@ formLogin.addEventListener("submit", function (evento) {
 
     //si el user existe va ala pagina del bienvenido
     if(existe){
-        // Guardamos el nombre del usuario en el baúl de la sesión activa
+        // Guardamos el nombre del usuario en el de la sesión activa
         sessionStorage.setItem("usuario_logueado", NombreUsuario);
 
         
