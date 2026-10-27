@@ -1,8 +1,7 @@
 
 /*   CONTENIDO PRINCIPAL */
 
-/* Estilos del contenido central de esta página.
-   No modifica el header ni el footer de general.css. */
+/* Estilos del contenido central de esta página. */
 main {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindFlip - Inicio</title>
+</head>
+<body>
+
+    <!-- Texto de guía y bienvenida superior -->
+    <p>MINDFLIP / 02 · INICIO DEL JUGADOR</p>
+    <h1>¡Bienvenido, Jugador123!</h1>
+    <p>Tu próxima partida está a un clic. ¿Preparado para jugar?</p>
+
+    <!-- CONTENEDOR GENERAL: El padre que usará Flexbox para separar las dos columnas -->
+    <div class="contenedor-principal">
+        
+        <!-- COLUMNA IZQUIERDA: Tarjeta del juego -->
+        <section class="seccion-juego">
+            <h2>Tu próxima partida</h2>
+            <p>Encuentra todas las parejas y supera tu récord.</p>
+            
+            <!-- CONTENEDOR DE CARTAS: El padre para alinear las imágenes en línea -->
+            <div class="fila-cartas">
+                <div><img src="../recursos/imagenes/01_simple_corazon.png" alt="Carta Corazón"></div>
+                <div><img src="../recursos/imagenes/02_simple_pica.png" alt="Carta Pica"></div>
+                <div><img src="../recursos/imagenes/03_simple_diamante.png" alt="Carta Diamante"></div>
+                <div><img src="../recursos/imagenes/04_simple_trebol.png" alt="Carta Trébol"></div>
+            </div>
+            
+            <!-- Botón normal para iniciar el juego -->
+            <button type="button" class="boton-jugar">JUGAR AHORA</button>
+        </section>
+
+        <!-- COLUMNA DERECHA: Bloque de estadísticas -->
+        <section class="seccion-estadisticas">
+            
+            <!-- Cuadro de mejor puntuación -->
+            <div>
+                <p>MEJOR PUNTUACIÓN</p>
+                <p>1.250</p>
+            </div>
+            
+            <!-- Cuadro de partidas jugadas -->
+            <div>
+                <p>PARTIDAS JUGADAS</p>
+                <p>14</p>
+            </div>
+            
+            <!-- Contenedor para agrupar los dos botones inferiores normales -->
+            <div class="grupo-botones">
+                <button type="button">VER RANKING</button>
+                <button type="button">MI PERFIL</button>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
