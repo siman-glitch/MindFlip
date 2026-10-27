@@ -1,9 +1,9 @@
-let formulario = document.getElementById('form_login');
+let formLogin = document.getElementById('form_login');
 let btnLogin = document.getElementById('inicioSesion');
 
 
 //function(evento)=> al hacer click submit envia datos 
-btnLogin.addEventListener("Submit", function (evento) {
+formLogin.addEventListener("submit", function (evento) {
     // Evita el envío automático del formulario
     evento.preventDefault();
     let NombreUsuario = document.getElementById('nombre').value;
@@ -13,15 +13,28 @@ btnLogin.addEventListener("Submit", function (evento) {
     let usuarios = obtenerUsuarios();
 
     //check si ell usuario y password correcto
+    let existe = false
     for (let i = 0; i < usuarios.length; i++) {
         if (usuarios[i].nombre === NombreUsuario && usuarios[i].password === password) {
-        //password+user=correcto---> ala pagina de bienvenido
-        window.location.href="../Bienvenido/indexedDB.html";
-    break;
+            existe = true;
+            break;
+        }
     }
 
+    //si el user existe va ala pagina del bienvenido
+    if(existe){
+        window.location.href="../Bienvenido/bienvenido.html";
+    }else{
+        //usamos el dom y mostarmos el emnsaje de error
 
 
+        //1.CREAR ELEMENTO
+        let mensajeError=document.createElement("small");
+        //ANADIR TEXTO
+        mensajeError.textContent="Usuario o contraseña incorrectos";
+        mensajeError.style.color="red";
+        //4.mostar el emnsaje abajo del input 
+        formLogin.appendChild(mensajeError);
     }
 
 
