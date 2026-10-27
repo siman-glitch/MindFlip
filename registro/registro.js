@@ -7,9 +7,25 @@ formRegistro.addEventListener("submit", function (evento) {
     // 1. Obtener los datos del formulario
     let user = document.getElementById("registro_usuario").value;
     let email = document.getElementById("registro_correo").value;
+    //files[0]:imagen que ha elegido user
+    let imagen = document.getElementById("imagen");
+    let avatar = document.getElementById("avatar");
     let contrasena = document.getElementById("registro_password").value;
     let confirmoPassw = document.getElementById("registro_confirmar").value;
 
+    
+
+imagen.addEventListener("change",function(){
+let archivo=imagen.files[0];
+
+if(archivo){
+        avatar.innerHTML = `<img src="${URL.createObjectURL(archivo)}" alt="Avatar">`;
+}
+});
+
+
+    
+    
     // 2. Limpiar los mensajes anteriores
     document.getElementById("error_correo").textContent = "";
     document.getElementById("error_password").textContent = "";
@@ -43,7 +59,8 @@ formRegistro.addEventListener("submit", function (evento) {
                 id: crypto.randomUUID(),
                 nombre: user,
                 email: email,
-                password: contrasena
+                password: contrasena,
+                imagen: imagen
             };
 
             // 7. Añadir el usuario al array
@@ -55,7 +72,7 @@ formRegistro.addEventListener("submit", function (evento) {
             // "usuarios": clave donde guardamos los datos
             // JSON.stringify(): convierte el array en texto
             localStorage.setItem("usuarios", JSON.stringify(usuarios));
-             
+
             // 8.5 Guardar el nombre en la sesión actual y redirigir
             sessionStorage.setItem("usuario_logueado", user);
             window.location.href = "../bienvenido/bienvenido.html";
