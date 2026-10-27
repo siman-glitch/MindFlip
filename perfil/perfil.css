@@ -1,0 +1,88 @@
+/*==============================PADRE====================================*/
+.perfil_contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    box-sizing: border-box;
+    margin: 20px;
+    align-items: center;
+    grid-column: span 2;
+}
+
+.datos_personales,
+.tarjeta_jugador {
+
+    min-width: 0;
+    box-sizing: border-box;
+
+}
+
+/*===============Parte imagen===========================*/
+.tarjeta_jugador {
+    background: rgb(241, 221, 184);
+    border: 3px solid rgb(240, 218, 17);
+    border-radius: 20px;
+    width: 80%;
+
+
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+/*===============Parte form===========================*/
+
+.datos_personales {
+    background: rgb(241, 221, 184);
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 3px solid rgb(240, 218, 17);
+    border-radius: 20px;
+
+}
+.datos_personales h3{
+    color: #850E16;
+font-size: 30px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+gap: 8px;
+}
+.campo label{
+    color: #850E16;
+}
+
+.campos_perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 20px;
+
+
+
+}
+.campos_perfil input{
+      border: 3px solid rgb(240, 218, 17);
+    border-radius: 20px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.boton_principal {
+    padding: 20px;
+    color: black;
+    background: #ce9f32;
+    box-sizing: border-box;
+    border: 3px solid rgb(240, 218, 17);
+    border-radius: 20px;
+     width: 50%;         /* El botón ocupa la mitad del ancho */
+    display: block;     /* Permite centrarlo usando margin */
+    margin: 20px auto;  /* 20px arriba y abajo, auto lo centra horizontalmente */
+}
+
+.boton_principal:hover {
+    background: #850E16;
+}
