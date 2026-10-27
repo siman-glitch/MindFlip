@@ -23,7 +23,12 @@ formLogin.addEventListener("submit", function (evento) {
 
     //si el user existe va ala pagina del bienvenido
     if(existe){
-        window.location.href="../Bienvenido/bienvenido.html";
+        // Guardamos el nombre del usuario en el baúl de la sesión activa
+        sessionStorage.setItem("usuario_logueado", NombreUsuario);
+
+        
+        // Redirigimos a tu carpeta y archivo reales en minúsculas
+        window.location.href = "../bienvenido/bienvenido.html";    
     }else{
         //usamos el dom y mostarmos el emnsaje de error
 
