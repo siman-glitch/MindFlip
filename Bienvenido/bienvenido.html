@@ -1,21 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido - MindFlip</title>
+    <title>Inicio del jugador - MindFlip</title>
 
     <link rel="stylesheet" href="../general.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bienvenido.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- LOGO Y MENU -->
+    <!-- HEADER -->
     <header>
 
         <div class="logo">
@@ -24,83 +23,97 @@
         </div>
 
         <nav class="menu">
-            <a href="../inicio/index.html">Inicio</a>
+            <a href="../inicio/inicio.html">Inicio</a>
             <a href="../dificultad/index.html">Jugar</a>
             <a href="../ranking/index.html">Ranking</a>
             <a href="../perfil/index.html">Mi perfil</a>
+            <a href="../inicio/index.html">Salir</a>
         </nav>
 
     </header>
 
-
-    <!-- CONTENIDO DE BIENVENIDO -->
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
 
-        <section class="pagina_bienvenido">
+        <!-- PRESENTACION DEL JUGADOR -->
+        <section class="presentacion">
 
-            <p class="subtitulo">MINDFLIP / 02 - BIENVENIDO</p>
+            <p class="subtitulo">MINDFLIP / 02 - INICIO DEL JUGADOR</p>
 
-            <h2>¡Bienvenido a MindFlip!</h2>
+            <h1>¡Bienvenido, Jugador123!</h1>
 
-            <p>Entrena tu memoria, encuentra las parejas y supera tus récords.</p>
+            <p>Tu próxima partida está a un clic. ¿Preparado para jugar?</p>
 
-            <div class="contenido_bienvenido">
+        </section>
 
-                <!-- PROXIMA PARTIDA -->
-                <article class="tarjeta_partida">
+        <!-- PANEL PRINCIPAL -->
+        <section class="panel_jugador">
 
-                    <h3>¿Preparado para jugar?</h3>
+            <!-- PROXIMA PARTIDA -->
+            <div class="proxima_partida">
 
-                    <p>Elige un nivel y empieza una nueva partida.</p>
+                <h2>Tu próxima partida</h2>
 
-                    <div class="imagenes_partida">
-                        <img src="../recursos/imagenes/01_simple_corazon.png" alt="Carta corazón">
-                        <img src="../recursos/imagenes/02_simple_pica.png" alt="Carta pica">
-                        <img src="../recursos/imagenes/03_simple_diamante.png" alt="Carta diamante">
-                        <img src="../recursos/imagenes/04_simple_trebol.png" alt="Carta trébol">
-                    </div>
+                <p>Encuentra todas las parejas y supera tu récord.</p>
 
-                    <a href="../dificultad/index.html" class="boton_jugar">
-                        JUGAR AHORA
-                    </a>
+                <!-- CARTAS DE PRESENTACION -->
+                <div class="cartas_presentacion">
 
-                </article>
+                    <img src="../recursos/imagenes/01_simple_corazon.png"
+                        alt="Carta de corazón">
 
+                    <img src="../recursos/imagenes/02_simple_pica.png"
+                        alt="Carta de pica">
 
-                <!-- ESTADISTICAS DEL JUGADOR -->
-                <aside class="estadisticas_bienvenido">
+                    <img src="../recursos/imagenes/03_simple_diamante.png"
+                        alt="Carta de diamante">
 
-                    <h3>Tu progreso</h3>
+                    <img src="../recursos/imagenes/04_simple_trebol.png"
+                        alt="Carta de trébol">
 
-                    <div class="dato_estadistica">
-                        <p>Mejor puntuación</p>
-                        <strong id="mejor_puntuacion">1250</strong>
-                    </div>
+                </div>
 
-                    <div class="dato_estadistica">
-                        <p>Partidas jugadas</p>
-                        <strong id="partidas_jugadas">14</strong>
-                    </div>
-
-                    <div class="dato_estadistica">
-                        <p>Parejas encontradas</p>
-                        <strong id="parejas_encontradas">86</strong>
-                    </div>
-
-                    <div class="enlaces_bienvenido">
-                        <a href="../ranking/index.html">VER RANKING</a>
-                        <a href="../perfil/index.html">MI PERFIL</a>
-                    </div>
-
-                </aside>
+                <!-- BOTON PARA JUGAR -->
+                <a href="../dificultad/index.html" class="boton_jugar">
+                    JUGAR AHORA
+                </a>
 
             </div>
+
+            <!-- ESTADISTICAS Y ACCESOS -->
+            <aside class="estadisticas">
+
+                <div class="estadistica">
+
+                    <p>MEJOR PUNTUACIÓN</p>
+
+                    <h2>1.250</h2>
+
+                </div>
+
+                <div class="estadistica">
+
+                    <p>PARTIDAS JUGADAS</p>
+
+                    <h2>14</h2>
+
+                </div>
+
+                <a href="../ranking/index.html" class="boton_ranking">
+                    VER RANKING
+                </a>
+
+                <a href="../perfil/index.html" class="boton_perfil">
+                    MI PERFIL
+                </a>
+
+            </aside>
 
         </section>
 
     </main>
 
-
+   
     <!-- FOOTER DE LA PAGINA -->
     <footer class="footer">
 
@@ -108,26 +121,20 @@
 
             <!-- NAVEGACION FOOTER -->
             <div class="footer_navegacion">
-
                 <h3>Navegación</h3>
 
                 <nav class="menu_footer_nav">
-
                     <div class="enlaces_footer_nav">
-                        <a href="../inicio/index.html">Inicio</a>
+                        <a href="../inicio/inicio.html">Inicio</a>
                         <a href="../dificultad/index.html">Jugar</a>
                         <a href="../ranking/index.html">Ranking</a>
                         <a href="../Bienvenido/index.html">Cómo jugar</a>
                     </div>
-
                 </nav>
-
             </div>
-
 
             <!-- SOPORTE -->
             <div class="footer_soporte">
-
                 <h3>Soporte</h3>
 
                 <div class="enlaces_footer_sup">
@@ -136,9 +143,7 @@
                     <span>Política de privacidad</span>
                     <span>Términos de uso</span>
                 </div>
-
             </div>
-
 
             <!-- REDES SOCIALES -->
             <div class="footer_redes">
@@ -164,11 +169,9 @@
                     </a>
 
                 </div>
-
             </div>
 
         </div>
-
 
         <!-- COPYRIGHT -->
         <div class="footer_inferior">
@@ -177,7 +180,6 @@
 
     </footer>
 
-    <script src="script.js" defer></script>
-
 </body>
+
 </html>
