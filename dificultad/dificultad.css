@@ -1,33 +1,33 @@
-/* Estilos del contenido central */
+/* =========================================
+   ESTILOS DEL CONTENIDO CENTRAL (MAIN)
+   ========================================= */
 main {
     display: flex;
     flex-direction: column;
     gap: 25px;
-    padding: 25px 4.5% 50px;
+    /* CORREGIDO: Quitamos el porcentaje lateral para que no empuje el contenido */
+    padding: 25px 0 50px; 
     box-sizing: border-box;
-    align-items: center; /* Centra horizontalmente el título y el bloque de niveles */
-}
-
-/* =========================================
-   PRESENTACIÓN DE LA SECCIÓN
-   ========================================= */
-
-/* Bloque idéntico al de bienvenida para mantener la coherencia */
-.dificultad {
-    display: block;
+    align-items: center; /* Centra los bloques en el eje horizontal */
     width: 100%;
-    text-align: center;
+}
+/* =========================================
+   PRESENTACIÓN DE LA SECCIÓN (TEXTOS SUPERIORES)
+   ========================================= */
+.dificultad {
+    width: 100%;
+    text-align: center; /* Centra el título y el párrafo */
 }
 
-/* Texto pequeño que aparece encima del título */
+/* Texto pequeño dorado encima del título */
 .dificultad .subtitulo {
     color: #ffe4a5;
     font-size: 14px;
     letter-spacing: 4px;
-    margin: 0 0 22px;
+    margin-bottom: 22px;
 }
 
-/* Título principal de la sección */
+/* Título principal H2 */
 .dificultad h2 {
     color: #fff8e9;
     font-size: 54px;
@@ -35,7 +35,7 @@ main {
     font-weight: bold;
 }
 
-/* CORREGIDO: Añadida la 'es' que faltaba en .dificultad */
+/* Párrafo descriptivo */
 .dificultad p {
     color: #f1d9bd;
     font-size: 18px;
@@ -43,17 +43,17 @@ main {
 }
 
 /* =========================================
-   PANEL CONTENEDOR DE NIVELES
+   PANEL CONTENEDOR DE LAS TARJETAS
    ========================================= */
 .niveles {
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centra las tarjetas de forma interna */
+    justify-content: center;
     gap: 34px;
     width: 100%;
     max-width: 1300px;
     
-    /* CORREGIDO: Cambiado align-self por margin auto para clavar el centrado horizontal */
+    /* >>> CORREGIDO: Añadimos 'auto' a los lados para clavar el eje central exacto <<< */
     margin: 15px auto 0; 
     box-sizing: border-box;
 }
@@ -62,23 +62,27 @@ main {
    TARJETAS DE NIVEL INDIVIDUALES
    ========================================= */
 .nivel {
-    background-color: #dfdcd5;
-    color: #cfc2c2;
-    border: 2px solid #ffc94f;
+    background-color: #dfdcd5; /* Color crema/grisáceo de fondo */
+    color: #51080b; /* Color del texto interno */
+    border: 2px solid #b3b0ac;
     border-radius: 22px;
     padding: 30px 25px 25px;
     box-sizing: border-box;
-    box-shadow: 5px 7px 0 rgba(60, 0, 0, 0.3);
     
-    flex: 1; /* Obliga a las tres tarjetas a tener exactamente el mismo ancho */
+    /* Sombra plana tradicional (Desplazamiento horizontal, vertical, difuminado y color) */
+    box-shadow: 5px 7px 0px rgba(60, 0, 0, 0.3);
+    
+    /* Reparte el espacio por igual: las 3 tarjetas medirán exactamente lo mismo de ancho */
+    flex: 1; 
 
+    /* Estructura interna de la tarjeta en columna para ordenar sus elementos */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-/* Título que está dentro de las cartas */
+/* Título de dificultad (FÁCIL, MEDIO, DIFÍCIL) */
 .nivel h3 {
     font-size: 32px;
     margin: 0 0 5px;
@@ -86,36 +90,33 @@ main {
     letter-spacing: 1px;
 }
 
-/* Texto con los detalles de parejas y cartas */
+/* Texto de subtítulo (ej. 6 parejas - 12 cartas) */
 .nivel p {
     color: #826b61;
     font-size: 16px;
-    margin: 0 0 25px;
+    margin-bottom: 25px;
 }
 
-/* Caja intermedia para centrar vuestras ilustraciones de previsualización */
+/* =========================================
+   CONTENEDOR DE LA IMAGEN DE MUESTRA
+   ========================================= */
 .cartas_nivel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     margin-bottom: 30px;
-    
-    /* Empuja el botón hacia la parte inferior si las tarjetas no miden lo mismo */
-    flex-grow: 1; 
+    display: flex;
+    justify-content: center;
 }
 
-/* Estilo para las imágenes reales (nivel_facil.png, etc.) */
+/* Ajuste básico de la imagen única para que no se deforme */
 .cartas_nivel img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    object-fit: contain;
-    
-    /* Filtro de sombra para darle profundidad a vuestra ilustración */
-    filter: drop-shadow(0px 5px 4px rgba(60, 0, 0, 0.2));
+    object-fit: contain; /* Evita que la imagen del pack de cartas se estire feo */
 }
 
-/* Botón de jugar este nivel, igual para los 3 botones */
+/* =========================================
+   BOTÓN DORADO "JUGAR EN ESTE NIVEL"
+   ========================================= */
 .boton_nivel {
     display: block;
     width: 100%;
@@ -126,12 +127,17 @@ main {
     font-weight: bold;
     color: #3e160b;
     
-    /* Degradado corporativo de amarillo claro a dorado */
+    /* Vuestro degradado corporativo tradicional de arriba a abajo */
     background: linear-gradient(to bottom, #ffe7a0, #f3b52e);
     
     border: 2px solid #fff0bf;
     border-radius: 17px;
     padding: 15px;
     box-sizing: border-box;
-    transition: background 0.2s, transform 0.1s;
+    transition: background 0.2s; /* Efecto suave de transición */
+}
+
+/* Efecto hover básico de cambio de color al pasar el ratón */
+.boton_nivel:hover {
+    background: #ffd36b;
 }
