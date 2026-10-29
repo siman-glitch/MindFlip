@@ -10,3 +10,37 @@ document.addEventListener("DOMContentLoaded", function () {
         contenedorSaludo.textContent = `¡Bienvenido, ${nombreUsuarioActivo}!`;
     }
 });
+
+
+
+//creamos una variable y y seleccionamos el boton de l html y lo metemos dentro de esa variable
+let botonJugarAhora = document.querySelector(".boton_jugar");
+
+//llamamos a la variable,
+botonJugarAhora.addEventListener("click", function (evento) {
+
+     evento.preventDefault();
+
+    
+    window.location.href = "../dificultad/dificultad.html";
+});
+
+ 
+
+
+
+//boton mi perfil
+
+// Buscamos el botón de MI PERFIL por su clase
+let botonMiPerfil = document.querySelector(".boton_perfil");
+
+// Escuchamos el evento de hacer click
+botonMiPerfil.addEventListener("click", function (evento) {
+    
+    // Evitamos la acción por defecto del enlace
+    evento.preventDefault();
+
+    // lo dirigimos directo a la carpeta y archivo de peril
+    window.location.href = "../perfil/perfil.html";
+});
+

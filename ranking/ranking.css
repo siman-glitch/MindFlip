@@ -1,0 +1,137 @@
+/* Estilos del contenido central del sitio */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 0 50px; /* Padding superior e inferior limpio para no descentrar */
+    box-sizing: border-box;
+    align-items: center; /* Desplaza el título y todo el bloque al eje central */
+    width: 100%;
+}
+
+/* PRESENTACIÓN DE LA SECCIÓN  */
+.ranking {
+    width: 100%;
+    text-align: center; /* Centra el h2 y el párrafo explicativo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Pequeño texto dorado arriba del título */
+.ranking .subtitulo {
+    color: #ffe4a5;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin: 0 0 22px;
+}
+
+/* Título principal H2 */
+.ranking h2 {
+    color: #fff8e9;
+    font-size: 54px;
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+
+/* Párrafo descriptivo del subtítulo */
+.ranking p {
+    color: #f1d9bd;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+
+.tabla_contenedor {
+    background-color: #fff9eb; /* Tono crema corporativo de vuestro panel */
+    border: 2px solid #ffc94f;  /* Borde dorado exterior */
+    border-radius: 22px;        /* Bordes redondeados idénticos a vuestro diseño */
+    padding: 25px 35px 25px;    /* Espacio interno para que la tabla respire */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1300px;          /* Ancho máximo exacto para que cuadre con bienvenida */
+    margin-top: 15px;
+    
+    /* Sombra plana corporativa tipo flat-design */
+    box-shadow: 5px 7px 0 rgba(60, 0, 0, 0.3);
+}
+
+
+.tabla_ranking {
+    width: 100%;
+    border-collapse: collapse;  /* Quita las líneas dobles feas de las celdas */
+    color: #51080b;             /* Texto burdeos oscuro para los datos */
+    margin-bottom: 25px;        /* Separa la tabla de los botones de abajo */
+}
+
+.tabla_ranking th {
+    background-color: #51080b;  /* Fondo burdeos oscuro de tu diseño */
+    color: #fff8e9;             /* Letras claras */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px;
+    text-align: left;           /* Alineación a la izquierda como en la foto */
+    letter-spacing: 1px;
+}
+
+/* Celdas del cuerpo de la tabla (TD) */
+.tabla_ranking td {
+    padding: 14px 16px;
+    font-size: 16px;
+    border-bottom: 1px solid #f4ebd9; /* Línea de división interna muy sutil */
+    text-align: left;
+}
+
+
+/*hace el efecto de la tabla que una linea sea un poco mas oscura*/
+.tabla_ranking tbody tr:nth-child(even) {
+    background-color: #f7f1df;
+}
+
+.acciones_ranking {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Empuja un botón a la izquierda y otro a la derecha */
+    align-items: center;
+    width: 100%;
+}
+
+
+/* Estilos comunes para ambos botones inferiores */
+.boton_secundario,
+.boton_principal {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 17px;
+    padding: 14px 28px;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+}
+
+
+.boton_secundario {
+    background-color: #6b1013;
+    color: white;
+    border: 2px solid #51080b;
+}
+
+.boton_secundario:hover {
+    background-color: #ffc94f;
+    color: #51080b;
+}
+
+.boton_principal {
+    background: linear-gradient(to bottom, #ffe7a0, #f3b52e);
+    color: #3e160b;
+    border: 2px solid #fff0bf;
+}
+
+.boton_principal:hover {
+    background: #ffd36b;
+}
