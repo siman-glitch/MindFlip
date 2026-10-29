@@ -29,9 +29,7 @@ botonJugarAhora.addEventListener("click", function (evento) {
 
 
 
-/* ==========================================
-   BOTÓN MI PERFIL (Redirección)
-========================================= */
+//boton mi perfil
 
 // Buscamos el botón de MI PERFIL por su clase
 let botonMiPerfil = document.querySelector(".boton_perfil");
@@ -42,7 +40,7 @@ botonMiPerfil.addEventListener("click", function (evento) {
     // Evitamos la acción por defecto del enlace
     evento.preventDefault();
 
-    // Redirigimos directo a la carpeta y archivo de perfil en minúsculas
+    // lo dirigimos directo a la carpeta y archivo de peril
     window.location.href = "../perfil/perfil.html";
 });
 

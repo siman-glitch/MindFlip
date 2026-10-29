@@ -13,13 +13,13 @@ let botonesNivel = document.querySelectorAll(".boton_nivel");
 // Recorremos los tres botones con un forEach
 botonesNivel.forEach(function (boton) {
     
-    // Capturamos el evento de hacer click en cada botón
+    // el evento de hacer click en cada botón
     boton.addEventListener("click", function () {
         
         // Leemos qué nivel tiene anotado este botón en su HTML (facil, medio o dificil)
         let nivelElegido = boton.getAttribute("data-nivel");
 
-        // WEBSTORAGE: Guardamos esa palabra en el baúl de la sesión actual
+        //  Guardamos esa palabra en el baúl de la sesión actual
         sessionStorage.setItem("dificultad_juego", nivelElegido);
 
         // Redirigimos automáticamente a la carpeta del juego
