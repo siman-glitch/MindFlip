@@ -3,6 +3,7 @@
 ========================================== */
 
 // creamos una variable y guardamos los 3 botones, quse llaman boton_nivel
+  //GUARDAMOS LOS 3 BOTONES
 let botonesNivel = document.querySelectorAll(".boton_nivel");
 
 

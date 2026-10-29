@@ -1,0 +1,224 @@
+
+/* ==============================
+   1. PAGINA DEL JUEGO
+============================== */
+
+.juego {
+    background-color: #870d16; /* Color de fondo rojo */
+    color: #fff5e6; /* Color del texto */
+    padding: 30px 25px 50px; /* Espacio interior: arriba, lados, abajo */
+    min-height: 70vh; /* Altura minima: 70% de la pantalla */
+}
+
+/* Texto pequeño superior */
+.juego .subtitulo {
+    font-size: 12px; /* Tamaño del texto */
+    letter-spacing: 3px; /* Espacio entre letras */
+    margin-bottom: 10px; /* Espacio debajo */
+}
+
+.juego h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.juego > p {
+    margin-bottom: 20px; /* Solo los parrafos hijos directos */
+}
+
+
+/* ==============================
+   2. CONTENIDO PRINCIPAL
+============================== */
+
+/* Padre de los tres bloques */
+.juego_contenido {
+    display: flex; /* Coloca los 3 bloques en una fila */
+    justify-content: center; /* Centra los bloques horizontalmente */
+    align-items: stretch; /* Los bloques ocupan la misma altura */
+    gap: 20px; /* Espacio entre bloques */
+    margin-top: 25px;
+}
+
+
+/* ==============================
+   3. ESTADISTICAS IZQUIERDA
+============================== */
+
+.estadisticas_juego {
+    width: 180px; /* Ancho del bloque */
+    display: flex;
+    flex-direction: column; /* Estadisticas una debajo de otra */
+    gap: 10px;
+}
+
+/* Cada caja de estadistica */
+.estadistica {
+    background-color: #650b12;
+    border: 1px solid #c98d30; /* Borde fino dorado */
+    border-radius: 10px; /* Esquinas redondeadas */
+    padding: 15px;
+}
+
+.estadistica h3 {
+    font-size: 12px;
+    font-weight: normal; /* Quita la negrita */
+    margin-bottom: 8px;
+}
+
+.estadistica strong {
+    color: #ffd166;
+    font-size: 24px;
+}
+
+
+/* ==============================
+   4. TABLERO CENTRAL
+============================== */
+
+.tablero {
+    flex: 1; /* Ocupa el espacio disponible */
+    max-width: 550px; /* Ancho maximo */
+    background-color: #fff8e8;
+    border: 2px solid #dba331;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+/* Contenedor padre de las cartas */
+.cartas_juego {
+    display: grid; /* Organiza las cartas en filas y columnas */
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas iguales */
+    gap: 10px; /* Espacio entre cartas */
+}
+
+/* Diseño de cada carta */
+.carta {
+    aspect-ratio: 3 / 4; /* Mantiene la proporcion ancho/alto */
+    width: 100%; /* Ocupa todo el ancho de su columna */
+    background-color: #bd2029;
+    color: white;
+    border: 4px double #e8aa35; /* Borde doble dorado */
+    border-radius: 10px;
+    font-size: 35px;
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cursor de mano al pasar */
+}
+
+/* Carta boca abajo */
+.carta_oculta {
+    background-color: #bd2029;
+    color: white;
+}
+
+/* Carta descubierta */
+.carta_descubierta {
+    background-color: #fff8e8;
+    color: #a30d19;
+}
+
+
+/* ==============================
+   5. RESUMEN DERECHA
+============================== */
+
+.resumen_partida {
+    width: 180px;
+    background-color: #fff8e8;
+    color: #590b12;
+    border: 2px solid #dba331;
+    border-radius: 15px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column; /* Coloca los elementos verticalmente */
+    gap: 10px;
+}
+
+.resumen_partida h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.resumen_partida p {
+    font-size: 13px;
+    color: #876c60;
+}
+
+.resumen_partida strong {
+    font-size: 25px;
+    color: #b51d28;
+    margin-bottom: 15px;
+}
+
+
+/* ==============================
+   6. BOTONES
+============================== */
+
+.acciones_partida {
+    display: flex;
+    flex-direction: column; /* Botones uno debajo de otro */
+    gap: 12px;
+    margin-top: auto; /* Empuja los botones hacia abajo */
+}
+
+/* Mismo estilo para botones y enlaces */
+.acciones_partida button,
+.acciones_partida a {
+    padding: 12px;
+    border: 2px solid #dba331;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none; /* Quita subrayado del enlace */
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Boton reiniciar */
+#reiniciar_partida {
+    background-color: #bd2029;
+    color: white;
+}
+
+/* Enlace volver */
+.acciones_partida a {
+    background-color: #fff8e8;
+    color: #590b12;
+}
+
+
+/* ==============================
+   7. RESPONSIVE
+============================== */
+
+/* Se aplica cuando la pantalla mide 800px o menos */
+@media (max-width: 800px) {
+
+    .juego_contenido {
+        flex-direction: column; /* Los 3 bloques pasan a columna */
+        align-items: center; /* Centra los bloques */
+    }
+
+    .estadisticas_juego {
+        width: 100%;
+        flex-direction: row; /* Estadisticas en fila */
+        flex-wrap: wrap; /* Saltan de linea si no caben */
+    }
+
+    .estadistica {
+        flex: 1; /* Reparte el espacio disponible */
+        min-width: 120px; /* Ancho minimo */
+    }
+
+    .tablero,
+    .resumen_partida {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .resumen_partida {
+        min-height: 250px;
+    }
+}
