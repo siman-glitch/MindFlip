@@ -1,0 +1,236 @@
+
+/* ==============================
+   1. PAGINA RESULTADO
+============================== */
+
+/* Contenedor principal */
+.resultado {
+    background-color: #870d16; /* Fondo rojo */
+    color: white; /* Texto blanco */
+    min-height: 70vh; /* Altura minima */
+    width: 100%; /* Ocupar todo el ancho */
+    padding: 30px; /* Espacio interior */
+    box-sizing: border-box; /* Mantener el ancho */
+
+    display: flex; /* Usar Flexbox */
+    flex-direction: column; /* Elementos uno debajo de otro */
+    align-items: center; /* Centrar horizontalmente */
+    gap: 10px; /* Espacio entre elementos */
+}
+
+/* Texto pequeño superior */
+.resultado .subtitulo {
+    color: #eabb4c; /* Texto dorado */
+    font-size: 12px; /* Letra pequeña */
+    letter-spacing: 3px; /* Espacio entre letras */
+    align-self: flex-start; /* Colocar a la izquierda */
+}
+
+/* Titulo principal */
+.resultado h2 {
+    color: white; /* Texto blanco */
+    font-size: 40px; /* Titulo grande */
+    text-align: center; /* Centrar texto */
+    margin: 5px; /* Espacio exterior */
+}
+
+/* Descripcion */
+.resultado > p {
+    color: #eddfc0; /* Texto crema */
+    font-size: 15px; /* Tamaño de letra */
+    text-align: center; /* Centrar texto */
+}
+
+/* Mantener el subtitulo a la izquierda */
+.resultado > .subtitulo {
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+
+/* ==============================
+   2. TARJETA CENTRAL
+============================== */
+
+.tarjeta_resultado {
+    background-color: #fff8e8; /* Fondo crema */
+    width: 550px; /* Ancho de la tarjeta */
+    max-width: 100%; /* Adaptar a la pantalla */
+    padding: 20px; /* Espacio interior */
+    border: 2px solid #eabb4c; /* Borde dorado */
+    border-radius: 15px; /* Esquinas redondas */
+    box-sizing: border-box; /* Mantener el ancho */
+    margin-top: 10px; /* Espacio superior */
+
+    display: flex; /* Organizar los elementos */
+    flex-direction: column; /* Uno debajo de otro */
+    align-items: center; /* Centrar los elementos */
+    gap: 20px; /* Espacio entre elementos */
+}
+
+
+/* ==============================
+   3. DOS CARTAS GANADORAS
+============================== */
+
+.pareja_ganadora {
+    display: flex; /* Colocar las cartas en fila */
+    flex-direction: row; /* Una al lado de otra */
+    justify-content: center; /* Centrar las cartas */
+    align-items: center; /* Alinear las cartas */
+    gap: 10px; /* Separacion entre cartas */
+    width: 100%; /* Ancho del contenedor */
+}
+
+/* Imagen de cada carta */
+.pareja_ganadora img {
+    width: 80px; /* Ancho de la carta */
+    height: 110px; /* Alto de la carta */
+    object-fit: contain; /* Mostrar imagen completa */
+    border: 2px solid #eabb4c; /* Borde dorado */
+    border-radius: 10px; /* Esquinas redondas */
+}
+
+
+/* ==============================
+   4. MENSAJE HAS GANADO
+============================== */
+
+.tarjeta_resultado h3 {
+    color: #45070b; /* Texto rojo oscuro */
+    font-size: 28px; /* Tamaño grande */
+    text-align: center; /* Centrar texto */
+    margin: 5px; /* Espacio exterior */
+}
+
+
+/* ==============================
+   5. PUNTUACION, TIEMPO E INTENTOS
+============================== */
+
+.resumen_resultado {
+    display: flex; /* Colocar las tres cajas en fila */
+    flex-direction: row; /* Una al lado de otra */
+    justify-content: center; /* Centrar las cajas */
+    gap: 20px; /* Espacio entre cajas */
+    width: 100%; /* Ocupar todo el ancho */
+}
+
+/* Cada caja de datos */
+.dato_resultado {
+    background-color: #f5e8ce; /* Fondo crema */
+    border: 1px solid #eabb4c; /* Borde dorado */
+    border-radius: 10px; /* Esquinas redondas */
+    padding: 15px; /* Espacio interior */
+    width: 130px; /* Ancho de cada caja */
+    box-sizing: border-box; /* Mantener el ancho */
+
+    display: flex; /* Organizar el texto */
+    flex-direction: column; /* Texto uno debajo de otro */
+    align-items: center; /* Centrar texto */
+    gap: 10px; /* Espacio entre nombre y numero */
+}
+
+/* Nombre del dato */
+.dato_resultado span {
+    color: #876c60; /* Texto gris */
+    font-size: 12px; /* Letra pequeña */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Numero del dato */
+.dato_resultado strong {
+    color: #bd2029; /* Numero rojo */
+    font-size: 22px; /* Numero grande */
+}
+
+
+/* ==============================
+   6. BOTONES
+============================== */
+
+.botones_resultado {
+    display: flex; /* Colocar botones en fila */
+    flex-direction: row; /* Uno al lado de otro */
+    justify-content: center; /* Centrar botones */
+    gap: 15px; /* Espacio entre botones */
+    width: 100%; /* Ocupar todo el ancho */
+}
+
+/* Estilo general de los enlaces */
+.botones_resultado a {
+    width: 200px; /* Ancho de cada boton */
+    padding: 12px; /* Espacio interior */
+    border: 2px solid #eabb4c; /* Borde dorado */
+    border-radius: 10px; /* Esquinas redondas */
+    box-sizing: border-box; /* Mantener el ancho */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Quitar subrayado */
+    font-size: 13px; /* Tamaño de letra */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cursor de mano */
+}
+
+/* Boton volver a jugar */
+.boton_principal {
+    background-color: #eabb4c; /* Fondo dorado */
+    color: #45070b; /* Texto oscuro */
+}
+
+/* Boton ver ranking */
+.boton_secundario {
+    background-color: #bd2029; /* Fondo rojo */
+    color: white; /* Texto blanco */
+}
+
+/* Cambiar color al pasar el raton */
+.botones_resultado a:hover {
+    background-color: #650b12; /* Fondo rojo oscuro */
+    color: white; /* Texto blanco */
+}
+
+
+/* ==============================
+   7. MOVILES
+============================== */
+
+@media (max-width: 600px) {
+
+    .resultado {
+        padding: 20px; /* Menos espacio interior */
+    }
+
+    .resultado h2 {
+        font-size: 30px; /* Titulo mas pequeño */
+    }
+
+    .tarjeta_resultado {
+        width: 100%; /* Adaptar a la pantalla */
+        padding: 15px; /* Menos espacio interior */
+    }
+
+    .resumen_resultado {
+        gap: 8px; /* Menos espacio entre cajas */
+    }
+
+    .dato_resultado {
+        width: 33%; /* Tres cajas en fila */
+        padding: 8px; /* Menos espacio interior */
+    }
+
+    .dato_resultado span {
+        font-size: 10px; /* Texto mas pequeño */
+    }
+
+    .dato_resultado strong {
+        font-size: 18px; /* Numero mas pequeño */
+    }
+
+    .botones_resultado {
+        flex-direction: column; /* Botones uno debajo de otro */
+        align-items: center; /* Centrar botones */
+    }
+
+    .botones_resultado a {
+        width: 100%; /* Botones ocupan todo el ancho */
+    }
+}
